@@ -1,0 +1,8 @@
+language: objective-c
+osx_image: xcode8.3
+before_script:
+    - gem install fastlane
+    - gem install xcov
+    - gem install danger-xcov
+script:
+    - fastlane test

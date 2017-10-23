@@ -1,0 +1,5 @@
+github "xmartlabs/Eureka"
+github "Alamofire/Alamofire"
+github "SwiftyJSON/SwiftyJSON"
+github "Swinject/Swinject" ~> 2.0.0
+github "Swinject/SwinjectStoryboard" ~> 1.0.0
