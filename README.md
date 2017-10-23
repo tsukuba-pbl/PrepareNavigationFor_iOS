@@ -3,7 +3,7 @@ master: [![Build Status](https://travis-ci.org/tsukuba-pbl/NavigationFor_iOS.svg
 develop: [![Build Status](https://travis-ci.org/tsukuba-pbl/NavigationFor_iOS.svg?branch=develop)](https://travis-ci.org/tsukuba-pbl/NavigationFor_iOS)
 [![Coverage Status](https://coveralls.io/repos/github/tsukuba-pbl/NavigationFor_iOS/badge.svg?branch=develop)](https://coveralls.io/github/tsukuba-pbl/NavigationFor_iOS?branch=develop)
 
-# 研究開発プロジェクト2017 ナビゲーションアプリ用リポジトリ
+# 研究開発プロジェクト2017 会場設営用アプリ用リポジトリ
 
 ## 環境構築
 
