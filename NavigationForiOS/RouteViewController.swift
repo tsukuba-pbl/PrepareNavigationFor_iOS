@@ -60,13 +60,13 @@ class RouteViewController: FormViewController {
             // Button
         +++ Section()
             <<< ButtonRow(){
-                $0.title = "Start Navigation"
+                $0.title = "ナビゲーションデータの作成を開始"
                 $0.onCellSelection{ [unowned self] cell, row in
                     if self.isSuccessLocationInput(source: self.source, destination: self.destination) {
                         //次のビュー(NavigationViewController)用に目的地の値を保持する
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                         appDelegate.destination = self.destination
-                        let next = self.storyboard!.instantiateViewController(withIdentifier: "NavigationStoryboard")
+                        let next = self.storyboard!.instantiateViewController(withIdentifier: "CreateRouteStoryboard")
                         self.present(next,animated: true, completion: nil)
                     }
                 }
