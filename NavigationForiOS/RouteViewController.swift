@@ -66,7 +66,7 @@ class RouteViewController: FormViewController {
                         //次のビュー(NavigationViewController)用に目的地の値を保持する
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                         appDelegate.destination = self.destination
-                        let next = self.storyboard!.instantiateViewController(withIdentifier: "CreateRouteStoryboard")
+                        let next = self.storyboard!.instantiateViewController(withIdentifier: "StartRouteCreateStoryboard")
                         self.present(next,animated: true, completion: nil)
                     }
                 }

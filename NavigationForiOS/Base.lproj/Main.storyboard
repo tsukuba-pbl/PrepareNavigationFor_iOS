@@ -181,10 +181,37 @@
             </objects>
             <point key="canvasLocation" x="3234.4000000000001" y="887.40629685157433"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ZFj-Pv-yPu">
+            <objects>
+                <viewController storyboardIdentifier="StartRouteCreateStoryboard" id="N4c-4B-0it" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dBI-0r-CiH"/>
+                        <viewControllerLayoutGuide type="bottom" id="dou-no-tLz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kPR-Cv-jFc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-Kw-YmH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="出発地点の計測" id="aAj-M1-9gz"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8f-Y0-84h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6126" y="-183"/>
+        </scene>
         <!--Beacon Logger View Controller-->
         <scene sceneID="FZn-0J-Glw">
             <objects>
-                <viewController storyboardIdentifier="CreateRouteStoryboard" id="AMJ-mc-yY0" customClass="BeaconLoggerViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetBeaconRssiStoryboard" id="AMJ-mc-yY0" customClass="BeaconLoggerViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="505-N7-yEa"/>
                         <viewControllerLayoutGuide type="bottom" id="z2o-bH-yq5"/>
@@ -257,6 +284,13 @@
                                 <rect key="frame" x="118" y="270" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8fC-Um-LHj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="電波強度計測" id="haV-Uz-AIt"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -270,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy3-xG-PCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6058" y="887"/>
+            <point key="canvasLocation" x="6126" y="532"/>
         </scene>
         <!--Route-->
         <scene sceneID="PtV-vF-ZQY">
@@ -309,7 +343,8 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="lgx-im-ZIh" kind="relationship" relationship="rootViewController" id="0cr-fc-PLp"/>
-                        <segue destination="AMJ-mc-yY0" kind="show" id="zOX-gf-njG"/>
+                        <segue destination="N4c-4B-0it" kind="show" id="YzP-Hr-e3I"/>
+                        <segue destination="AMJ-mc-yY0" kind="show" id="J9C-nE-DdO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJb-Bb-9As" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,6 +353,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bdz-82-WGe"/>
+        <segue reference="0cr-fc-PLp"/>
     </inferredMetricsTieBreakers>
 </document>
