@@ -181,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="3234.4000000000001" y="887.40629685157433"/>
         </scene>
-        <!--View Controller-->
+        <!--Start Route Create View Controller-->
         <scene sceneID="ZFj-Pv-yPu">
             <objects>
-                <viewController storyboardIdentifier="StartRouteCreateStoryboard" id="N4c-4B-0it" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartRouteCreateStoryboard" id="N4c-4B-0it" customClass="StartRouteCreateViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dBI-0r-CiH"/>
                         <viewControllerLayoutGuide type="bottom" id="dou-no-tLz"/>
@@ -200,13 +200,34 @@
                                     <navigationItem title="出発地点の計測" id="aAj-M1-9gz"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slj-eW-rze">
+                                <rect key="frame" x="16" y="95" width="303" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4D8-I7-Urg">
+                                <rect key="frame" x="0.0" y="411" width="375" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.067996799945831299" green="0.47757309675216675" blue="0.99907130002975464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="電波強度の計測"/>
+                                <connections>
+                                    <action selector="OnButtonTouch:" destination="N4c-4B-0it" eventType="touchDown" id="uCU-DR-wCu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="startNavigationLabel" destination="Slj-eW-rze" id="L75-2s-c70"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8f-Y0-84h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6126" y="-183"/>
+            <point key="canvasLocation" x="6125.6000000000004" y="-183.05847076461771"/>
         </scene>
         <!--Beacon Logger View Controller-->
         <scene sceneID="FZn-0J-Glw">

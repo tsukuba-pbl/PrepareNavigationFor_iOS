@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var eventInfo: EventEntity?
   
     //RouteViewControllerでdestinationの値を保持するために利用する
+    var source: String?
     var destination: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
