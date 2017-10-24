@@ -21,10 +21,14 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     var timer : Timer!
     var onStart = false //計測中かどうか
     
-    var routeId = 1
+    var routeId = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //AppDelegateからroute idを取得
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        routeId = appDelegate.currentRouteId!
         
         //最初はスタートボタンは押せる状態
         startButton.isEnabled = true
