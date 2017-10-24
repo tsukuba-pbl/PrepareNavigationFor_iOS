@@ -108,17 +108,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B148833F1F3C4D32007A9E2E /* NavigationForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B148833F1F3C4D32007A9E2E /* PrepareNavigationForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrepareNavigationForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14883421F3C4D32007A9E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14883441F3C4D32007A9E2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B14883491F3C4D32007A9E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B148834B1F3C4D32007A9E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B148834E1F3C4D32007A9E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B14883501F3C4D32007A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B14883551F3C4D32007A9E2E /* NavigationForiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationForiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14883551F3C4D32007A9E2E /* PrepareNavigationForiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrepareNavigationForiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14883591F3C4D32007A9E2E /* NavigationForiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationForiOSTests.swift; sourceTree = "<group>"; };
 		B148835B1F3C4D32007A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B14883601F3C4D32007A9E2E /* NavigationForiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationForiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14883601F3C4D32007A9E2E /* PrepareNavigationForiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrepareNavigationForiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14883641F3C4D32007A9E2E /* NavigationForiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationForiOSUITests.swift; sourceTree = "<group>"; };
 		B14883661F3C4D32007A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B148837F1F43538B007A9E2E /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
@@ -221,9 +221,9 @@
 		B14883401F3C4D32007A9E2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B148833F1F3C4D32007A9E2E /* NavigationForiOS.app */,
-				B14883551F3C4D32007A9E2E /* NavigationForiOSTests.xctest */,
-				B14883601F3C4D32007A9E2E /* NavigationForiOSUITests.xctest */,
+				B148833F1F3C4D32007A9E2E /* PrepareNavigationForiOS.app */,
+				B14883551F3C4D32007A9E2E /* PrepareNavigationForiOSTests.xctest */,
+				B14883601F3C4D32007A9E2E /* PrepareNavigationForiOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -366,9 +366,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B148833E1F3C4D32007A9E2E /* NavigationForiOS */ = {
+		B148833E1F3C4D32007A9E2E /* PrepareNavigationForiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B14883691F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOS" */;
+			buildConfigurationList = B14883691F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOS" */;
 			buildPhases = (
 				B148833B1F3C4D32007A9E2E /* Sources */,
 				B148833C1F3C4D32007A9E2E /* Frameworks */,
@@ -379,14 +379,14 @@
 			);
 			dependencies = (
 			);
-			name = NavigationForiOS;
+			name = PrepareNavigationForiOS;
 			productName = NavigationForiOS;
-			productReference = B148833F1F3C4D32007A9E2E /* NavigationForiOS.app */;
+			productReference = B148833F1F3C4D32007A9E2E /* PrepareNavigationForiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B14883541F3C4D32007A9E2E /* NavigationForiOSTests */ = {
+		B14883541F3C4D32007A9E2E /* PrepareNavigationForiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B148836C1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOSTests" */;
+			buildConfigurationList = B148836C1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOSTests" */;
 			buildPhases = (
 				B14883511F3C4D32007A9E2E /* Sources */,
 				B14883521F3C4D32007A9E2E /* Frameworks */,
@@ -397,14 +397,14 @@
 			dependencies = (
 				B14883571F3C4D32007A9E2E /* PBXTargetDependency */,
 			);
-			name = NavigationForiOSTests;
+			name = PrepareNavigationForiOSTests;
 			productName = NavigationForiOSTests;
-			productReference = B14883551F3C4D32007A9E2E /* NavigationForiOSTests.xctest */;
+			productReference = B14883551F3C4D32007A9E2E /* PrepareNavigationForiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B148835F1F3C4D32007A9E2E /* NavigationForiOSUITests */ = {
+		B148835F1F3C4D32007A9E2E /* PrepareNavigationForiOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B148836F1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOSUITests" */;
+			buildConfigurationList = B148836F1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOSUITests" */;
 			buildPhases = (
 				B148835C1F3C4D32007A9E2E /* Sources */,
 				B148835D1F3C4D32007A9E2E /* Frameworks */,
@@ -415,9 +415,9 @@
 			dependencies = (
 				B14883621F3C4D32007A9E2E /* PBXTargetDependency */,
 			);
-			name = NavigationForiOSUITests;
+			name = PrepareNavigationForiOSUITests;
 			productName = NavigationForiOSUITests;
-			productReference = B14883601F3C4D32007A9E2E /* NavigationForiOSUITests.xctest */;
+			productReference = B14883601F3C4D32007A9E2E /* PrepareNavigationForiOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -454,7 +454,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B148833A1F3C4D32007A9E2E /* Build configuration list for PBXProject "NavigationForiOS" */;
+			buildConfigurationList = B148833A1F3C4D32007A9E2E /* Build configuration list for PBXProject "PrepareNavigationForiOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -467,9 +467,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B148833E1F3C4D32007A9E2E /* NavigationForiOS */,
-				B14883541F3C4D32007A9E2E /* NavigationForiOSTests */,
-				B148835F1F3C4D32007A9E2E /* NavigationForiOSUITests */,
+				B148833E1F3C4D32007A9E2E /* PrepareNavigationForiOS */,
+				B14883541F3C4D32007A9E2E /* PrepareNavigationForiOSTests */,
+				B148835F1F3C4D32007A9E2E /* PrepareNavigationForiOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -573,12 +573,12 @@
 /* Begin PBXTargetDependency section */
 		B14883571F3C4D32007A9E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B148833E1F3C4D32007A9E2E /* NavigationForiOS */;
+			target = B148833E1F3C4D32007A9E2E /* PrepareNavigationForiOS */;
 			targetProxy = B14883561F3C4D32007A9E2E /* PBXContainerItemProxy */;
 		};
 		B14883621F3C4D32007A9E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B148833E1F3C4D32007A9E2E /* NavigationForiOS */;
+			target = B148833E1F3C4D32007A9E2E /* PrepareNavigationForiOS */;
 			targetProxy = B14883611F3C4D32007A9E2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -710,7 +710,7 @@
 				INFOPLIST_FILE = NavigationForiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.NavigationForiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.PrepareNavigationForiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -728,7 +728,7 @@
 				INFOPLIST_FILE = NavigationForiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.NavigationForiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.PrepareNavigationForiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -749,7 +749,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.NavigationForiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavigationForiOS.app/NavigationForiOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrepareNavigationForiOS.app/PrepareNavigationForiOS";
 			};
 			name = Debug;
 		};
@@ -768,7 +768,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.NavigationForiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavigationForiOS.app/NavigationForiOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrepareNavigationForiOS.app/PrepareNavigationForiOS";
 			};
 			name = Release;
 		};
@@ -803,7 +803,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B148833A1F3C4D32007A9E2E /* Build configuration list for PBXProject "NavigationForiOS" */ = {
+		B148833A1F3C4D32007A9E2E /* Build configuration list for PBXProject "PrepareNavigationForiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B14883671F3C4D32007A9E2E /* Debug */,
@@ -812,7 +812,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B14883691F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOS" */ = {
+		B14883691F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B148836A1F3C4D32007A9E2E /* Debug */,
@@ -821,7 +821,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B148836C1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOSTests" */ = {
+		B148836C1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B148836D1F3C4D32007A9E2E /* Debug */,
@@ -830,7 +830,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B148836F1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOSUITests" */ = {
+		B148836F1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B14883701F3C4D32007A9E2E /* Debug */,
