@@ -321,6 +321,7 @@
                     </view>
                     <connections>
                         <outlet property="Counter" destination="EVX-HH-Eiv" id="t8a-LH-bTP"/>
+                        <outlet property="getOrientationButton" destination="w85-Ex-Xt9" id="424-nk-IWU"/>
                         <outlet property="loggerActivityIndicator" destination="eaq-Zg-XZO" id="6sW-JR-JDh"/>
                         <outlet property="routeIdLabel" destination="Tsj-ra-W9F" id="Qmc-gJ-b41"/>
                         <outlet property="startButton" destination="LDO-su-tAb" id="p1Z-ce-aN9"/>

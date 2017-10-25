@@ -12,6 +12,7 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     @IBOutlet weak var startButton: UIButton! //計測開始ボタン
     @IBOutlet weak var routeIdLabel: UILabel!
     
+    @IBOutlet weak var getOrientationButton: UIButton!
     var navigations : NavigationEntity = NavigationEntity()
     var beaconLogger : BeaconLoggerController?
     
@@ -31,6 +32,9 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
         
         //最初はスタートボタンは押せる状態
         startButton.isEnabled = true
+        //方位角の計測ボタンは押せないようにする
+        getOrientationButton.isEnabled = false
+        //カウンタの値を0にする
         Counter.text = "0"
         
         routeIdLabel.text = "\(routeId)"
@@ -52,6 +56,8 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
             onStart = true
             startButton.setTitle("Stop", for: UIControlState.normal)
             startButton.backgroundColor = UIColor.red
+            //方位角の計測ボタンを押せないようにする
+            getOrientationButton.isEnabled = false
             //くるくる開始
             loggerActivityIndicator.startAnimating()
             //計測を開始する
@@ -66,6 +72,8 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
             loggerActivityIndicator.stopAnimating()
             //フラグ処理
             onStart = false
+            //方位角の計測ボタンを押せるようにする
+            getOrientationButton.isEnabled = true
         }
     }
     
