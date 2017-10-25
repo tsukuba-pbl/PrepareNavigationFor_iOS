@@ -26,7 +26,7 @@ platform :ios do
     if is_ci?
       scan(clean: true, skip_slack: false, slack_only_on_failure: true)
       xcov(
-        scheme: "NavigationForiOS",
+        scheme: "PrepareNavigationForiOS",
         output_directory: "fastlane/xcov_output",
         coveralls_repo_token: ENV["COVERALLS_TOKEN"]
       )
