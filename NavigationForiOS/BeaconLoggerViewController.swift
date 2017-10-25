@@ -11,7 +11,6 @@ import UIKit
 class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     @IBOutlet weak var startButton: UIButton! //計測開始ボタン
     @IBOutlet weak var routeIdLabel: UILabel!
-    @IBOutlet weak var setRouteIdStepper: UIStepper!
     
     var navigations : NavigationEntity = NavigationEntity()
     var beaconLogger : BeaconLoggerController?
@@ -53,8 +52,6 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
             onStart = true
             startButton.setTitle("Stop", for: UIControlState.normal)
             startButton.backgroundColor = UIColor.red
-            //Stepperを押せないようにする
-            setRouteIdStepper.isEnabled = false
             //くるくる開始
             loggerActivityIndicator.startAnimating()
             //計測を開始する
@@ -67,11 +64,6 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
             Counter.text = "0"
             //くるくる終了
             loggerActivityIndicator.stopAnimating()
-            //Stepperの表示を変更
-            setRouteIdStepper.value += 1.0
-            routeId += 1
-            routeIdLabel.text = "\(routeId)"
-            setRouteIdStepper.isEnabled = true
             //フラグ処理
             onStart = false
         }

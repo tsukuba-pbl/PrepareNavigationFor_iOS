@@ -12,11 +12,17 @@ import UIKit
 class GetOrientationViewController: UIViewController {
     let magneticSensorService = MagneticSensorSerivce()
     var magneticOrientation = 0.0
+    var arrowImage : UIImage!
     
+    @IBOutlet weak var arrowImageView: UIImageView!
     @IBOutlet weak var magneticOrientationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //矢印の画像を読み込み
+        arrowImage = UIImage(named: "arrow.png")
+        arrowImageView.image = arrowImage
         //地磁気方向の取得を開始する
         magneticSensorService.startMagneticSensorService()
         // 1秒ごとにビーコンの情報を取得する
