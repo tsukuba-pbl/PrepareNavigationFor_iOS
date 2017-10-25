@@ -338,10 +338,10 @@
             </objects>
             <point key="canvasLocation" x="6126" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--Get Orientation View Controller-->
         <scene sceneID="WsK-lo-9Ds">
             <objects>
-                <viewController storyboardIdentifier="GetDirectionStoryBoard" id="O7O-gK-Upq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetOrientationStoryBoard" id="O7O-gK-Upq" customClass="GetOrientationViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dQ9-ky-w3P"/>
                         <viewControllerLayoutGuide type="bottom" id="8ok-Nc-zT2"/>
@@ -357,8 +357,15 @@
                                     <navigationItem title="方角の計測" id="vfR-uH-zCl"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="次に進む方向を向いてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayz-Ei-v6a">
-                                <rect key="frame" x="37" y="104" width="304" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjM-OY-II9">
+                                <rect key="frame" x="76" y="303" width="222" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="次に進む方向を向いてください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayz-Ei-v6a">
+                                <rect key="frame" x="35" y="100" width="304" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -367,6 +374,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="magneticOrientationLabel" destination="qjM-OY-II9" id="qBV-4X-pnR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYM-B1-FkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
