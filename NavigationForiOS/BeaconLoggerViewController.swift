@@ -77,6 +77,11 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
         }
     }
     
+    //次の遷移
+    @IBAction func OnTouchNext(_ sender: Any) {
+        let next = self.storyboard!.instantiateViewController(withIdentifier: "GetDirectionStoryBoard")
+        self.present(next,animated: true, completion: nil)
+    }
     //ビューの更新
     func updateView(){
         let retval = beaconLogger?.getLoggerState()
