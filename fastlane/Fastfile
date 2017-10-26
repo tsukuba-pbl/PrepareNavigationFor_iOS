@@ -17,7 +17,7 @@ default_platform :ios
 
 platform :ios do
   before_all do
-    carthage(platform: "iOS") 
+    carthage(platform: "iOS", use_binaries: false) 
     
   end
 
@@ -26,15 +26,15 @@ platform :ios do
     if is_ci?
       scan(clean: true, skip_slack: false, slack_only_on_failure: true)
       xcov(
-        scheme: "NavigationForiOS",
+        scheme: "PrepareNavigationForiOS",
         output_directory: "fastlane/xcov_output",
         coveralls_repo_token: ENV["COVERALLS_TOKEN"]
       )
-      danger(
-        dangerfile: "Dangerfile",
-        github_api_token: ENV["DANGER_GITHUB_API_TOKEN"],
-        verbose: true
-      )
+#      danger(
+#        dangerfile: "Dangerfile",
+#        github_api_token: ENV["DANGER_GITHUB_API_TOKEN"],
+#        verbose: true
+#      )
     else 
       scan(clean: true, skip_slack: true)
     end

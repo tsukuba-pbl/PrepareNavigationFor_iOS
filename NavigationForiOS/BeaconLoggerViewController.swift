@@ -11,8 +11,8 @@ import UIKit
 class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     @IBOutlet weak var startButton: UIButton! //計測開始ボタン
     @IBOutlet weak var routeIdLabel: UILabel!
-    @IBOutlet weak var setRouteIdStepper: UIStepper!
     
+    @IBOutlet weak var getOrientationButton: UIButton!
     var navigations : NavigationEntity = NavigationEntity()
     var beaconLogger : BeaconLoggerController?
     
@@ -21,13 +21,20 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     var timer : Timer!
     var onStart = false //計測中かどうか
     
-    var routeId = 1
+    var routeId = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //AppDelegateからroute idを取得
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        routeId = appDelegate.currentRouteId!
+        
         //最初はスタートボタンは押せる状態
         startButton.isEnabled = true
+        //方位角の計測ボタンは押せないようにする
+        getOrientationButton.isEnabled = false
+        //カウンタの値を0にする
         Counter.text = "0"
         
         routeIdLabel.text = "\(routeId)"
@@ -49,8 +56,8 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
             onStart = true
             startButton.setTitle("Stop", for: UIControlState.normal)
             startButton.backgroundColor = UIColor.red
-            //Stepperを押せないようにする
-            setRouteIdStepper.isEnabled = false
+            //方位角の計測ボタンを押せないようにする
+            getOrientationButton.isEnabled = false
             //くるくる開始
             loggerActivityIndicator.startAnimating()
             //計測を開始する
@@ -63,16 +70,18 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
             Counter.text = "0"
             //くるくる終了
             loggerActivityIndicator.stopAnimating()
-            //Stepperの表示を変更
-            setRouteIdStepper.value += 1.0
-            routeId += 1
-            routeIdLabel.text = "\(routeId)"
-            setRouteIdStepper.isEnabled = true
             //フラグ処理
             onStart = false
+            //方位角の計測ボタンを押せるようにする
+            getOrientationButton.isEnabled = true
         }
     }
     
+    //次の遷移
+    @IBAction func OnTouchNext(_ sender: Any) {
+        let next = self.storyboard!.instantiateViewController(withIdentifier: "GetOrientationStoryBoard")
+        self.present(next,animated: true, completion: nil)
+    }
     //ビューの更新
     func updateView(){
         let retval = beaconLogger?.getLoggerState()

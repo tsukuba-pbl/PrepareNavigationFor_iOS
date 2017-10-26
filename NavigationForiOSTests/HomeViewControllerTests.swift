@@ -7,24 +7,24 @@
 //
 
 import XCTest
-@testable import NavigationForiOS
+@testable import PrepareNavigationForiOS
 
 class HomeViewControllerTests: XCTestCase {
     
-    var homeViewController: HomeViewController?
-    
-    override func setUp() {
-        super.setUp()
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
-        self.homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeStoryBoard") as? NavigationForiOS.HomeViewController
-        self.homeViewController?.loadView()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
+//    var homeViewController: HomeViewController?
+//
+//    override func setUp() {
+//        super.setUp()
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//
+//        self.homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeStoryBoard") as? PrepareNavigationForiOS.HomeViewController
+//        self.homeViewController?.loadView()
+//    }
+//
+//    override func tearDown() {
+//        super.tearDown()
+//    }
+//
 //    func testViewDidLoad_eventsにちゃんと代入されているかのテスト() {
 //        //テスト用にNavigationServiceのモックを作成
 //        class MocEventService : EventService{
@@ -41,10 +41,10 @@ class HomeViewControllerTests: XCTestCase {
 //        XCTAssertEqual((self.homeViewController?.events)!, ["enPiT", "アクセシビリティ研究会"])
 //    }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
 }

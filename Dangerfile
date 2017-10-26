@@ -1,5 +1,5 @@
 xcov.report(
-    scheme: 'NavigationForiOS',
-    workspace: 'NavigationForiOS.xcworkspace',
+    scheme: ‘PrepareNavigationForiOS',
+    workspace: ‘PrepareNavigationForiOS.xcworkspace',
     minimum_coverage_percentage: 40.0
 )

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import NavigationForiOS
+@testable import PrepareNavigationForiOS
 
 class MagneticSensorServiceTests: XCTestCase {
     

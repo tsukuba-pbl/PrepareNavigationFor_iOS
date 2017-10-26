@@ -8,7 +8,7 @@
 
 import XCTest
 import UIKit
-@testable import NavigationForiOS
+@testable import PrepareNavigationForiOS
 
 class BeaconLoggerControllerTests: XCTestCase {
     var beaconLoggerController: BeaconLoggerController!
