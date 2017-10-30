@@ -577,7 +577,7 @@
         <!--Navigation View Controller-->
         <scene sceneID="6tV-IG-eGi">
             <objects>
-                <viewController storyboardIdentifier="NavigationStoryboard" id="Ky4-t3-5XS" customClass="NavigationViewController" customModule="NavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NavigationStoryboard" id="Ky4-t3-5XS" customClass="NavigationViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P5x-h4-Dah"/>
                         <viewControllerLayoutGuide type="bottom" id="sOu-8H-3fm"/>
@@ -688,6 +688,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bdz-82-WGe"/>
+        <segue reference="JWO-u6-o8P"/>
     </inferredMetricsTieBreakers>
 </document>
