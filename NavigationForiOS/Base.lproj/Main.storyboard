@@ -113,7 +113,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2w-Om-8Bk">
                                 <rect key="frame" x="53" y="445" width="268" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ナビゲーション環境を構築を始める"/>
+                                <color key="backgroundColor" red="0.065121404826641083" green="0.47932010889053345" blue="0.9990578293800354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ナビゲーション環境を構築を始める">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="mCy-2i-rV8" kind="show" id="JWO-u6-o8P"/>
                                 </connections>
@@ -208,12 +211,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4D8-I7-Urg">
-                                <rect key="frame" x="0.0" y="411" width="375" height="83"/>
+                                <rect key="frame" x="57" y="445" width="262" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.067996799945831299" green="0.47757309675216675" blue="0.99907130002975464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="電波強度の計測"/>
+                                <state key="normal" title="次へ"/>
                                 <connections>
                                     <action selector="OnButtonTouch:" destination="N4c-4B-0it" eventType="touchDown" id="uCU-DR-wCu"/>
                                 </connections>
@@ -227,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8f-Y0-84h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6126" y="-640"/>
+            <point key="canvasLocation" x="6125.6000000000004" y="-640.02998500749629"/>
         </scene>
         <!--Beacon Logger View Controller-->
         <scene sceneID="FZn-0J-Glw">
@@ -306,12 +309,12 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w85-Ex-Xt9">
-                                <rect key="frame" x="0.0" y="441" width="375" height="83"/>
+                                <rect key="frame" x="59" y="541" width="257" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.067996799950000006" green="0.47757309679999999" blue="0.9990713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="方角の計測"/>
+                                <state key="normal" title="次へ"/>
                                 <connections>
                                     <action selector="OnTouchNext:" destination="AMJ-mc-yY0" eventType="touchDown" id="GPb-Nw-LR4"/>
                                 </connections>
@@ -329,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy3-xG-PCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6126" y="121"/>
+            <point key="canvasLocation" x="6125.6000000000004" y="120.98950524737631"/>
         </scene>
         <!--Get Orientation View Controller-->
         <scene sceneID="WsK-lo-9Ds">
@@ -369,12 +372,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJx-tW-rtY">
-                                <rect key="frame" x="0.0" y="464" width="375" height="83"/>
+                                <rect key="frame" x="62" y="467" width="251" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.067996799950000006" green="0.47757309679999999" blue="0.9990713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="計測"/>
+                                <state key="normal" title="次へ"/>
                                 <connections>
                                     <action selector="OnTouchNext:" destination="AMJ-mc-yY0" eventType="touchDown" id="xM9-fJ-vXu"/>
                                 </connections>
