@@ -379,7 +379,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="次へ"/>
                                 <connections>
-                                    <action selector="OnTouchNext:" destination="AMJ-mc-yY0" eventType="touchDown" id="xM9-fJ-vXu"/>
+                                    <action selector="onTouchNextButton:" destination="O7O-gK-Upq" eventType="touchDown" id="jfX-8N-sJF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -394,10 +394,10 @@
             </objects>
             <point key="canvasLocation" x="6125.6000000000004" y="886.50674662668678"/>
         </scene>
-        <!--View Controller-->
+        <!--Get Road Step Rssi View Controller-->
         <scene sceneID="MSy-YL-8Wi">
             <objects>
-                <viewController id="OqY-s2-1cp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetRoadStepRssiStoryboard" id="OqY-s2-1cp" customClass="GetRoadStepRssiViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b0z-YE-ohZ"/>
                         <viewControllerLayoutGuide type="bottom" id="0fh-Ds-yH1"/>
@@ -413,18 +413,137 @@
                                     <navigationItem title="歩数の計測" id="Mz5-bL-4Ba"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="次の交差点・目的地まで進んでください" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVW-ZU-5SB">
+                                <rect key="frame" x="30" y="78" width="256" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOP-Th-h3a">
+                                <rect key="frame" x="53" y="218" width="269" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="到着したら，下のボタンを押してください" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOv-7N-diR">
+                                <rect key="frame" x="30" y="404" width="282" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16q-az-GKw">
+                                <rect key="frame" x="62" y="507" width="251" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.067996799950000006" green="0.47757309679999999" blue="0.9990713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="到着"/>
+                                <connections>
+                                    <action selector="onTouchNextButton:" destination="OqY-s2-1cp" eventType="touchDown" id="brh-lE-IWX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="StepsLabel" destination="gOP-Th-h3a" id="Rgo-0w-BXB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Kg-go-z2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6125.6000000000004" y="1668.2158920539732"/>
+        </scene>
+        <!--Is Dest View Controller-->
+        <scene sceneID="mXg-Dy-bo8">
+            <objects>
+                <viewController storyboardIdentifier="IsDestStoryboard" id="hYs-An-hXC" customClass="IsDestViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T3b-6b-ibV"/>
+                        <viewControllerLayoutGuide type="bottom" id="evb-KC-YoM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mKO-F6-NOk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAR-NA-bEd">
+                                <rect key="frame" x="62" y="187" width="251" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.067996799950000006" green="0.47757309679999999" blue="0.9990713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="はい"/>
+                                <connections>
+                                    <action selector="OnTouchYesButon:" destination="hYs-An-hXC" eventType="touchDown" id="Fik-kD-w6y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmN-NO-KIS">
+                                <rect key="frame" x="62" y="400" width="251" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.067996799950000006" green="0.47757309679999999" blue="0.9990713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="いいえ"/>
+                                <connections>
+                                    <action selector="OnTouchNoButton:" destination="hYs-An-hXC" eventType="touchDown" id="1eh-IX-cht"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ここは目的地ですか？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcV-5a-nUD">
+                                <rect key="frame" x="46" y="74" width="282" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Kg-go-z2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GL2-lT-lPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6126" y="1669"/>
+            <point key="canvasLocation" x="6126" y="2543"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="exH-QU-VmT">
+            <objects>
+                <viewController storyboardIdentifier="UploadStoryboard" id="kkF-Bx-KuW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YYj-et-mhY"/>
+                        <viewControllerLayoutGuide type="bottom" id="dWX-5A-aIN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="szY-tB-vs9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ルート情報をアップロードしました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcr-nZ-5dc">
+                                <rect key="frame" x="46" y="117" width="282" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-Gz-kFE">
+                                <rect key="frame" x="62" y="338" width="251" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.067996799950000006" green="0.47757309679999999" blue="0.9990713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="OK"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPJ-p4-7pc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6126" y="3260"/>
         </scene>
         <!--Route-->
         <scene sceneID="PtV-vF-ZQY">
             <objects>
-                <viewController id="lgx-im-ZIh" customClass="RouteViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RouteStoryboard" id="lgx-im-ZIh" customClass="RouteViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l4h-Sc-IH2"/>
                         <viewControllerLayoutGuide type="bottom" id="AKw-xr-liT"/>
@@ -462,6 +581,9 @@
                         <segue destination="AMJ-mc-yY0" kind="show" id="J9C-nE-DdO"/>
                         <segue destination="O7O-gK-Upq" kind="show" id="BmN-oN-lPO"/>
                         <segue destination="OqY-s2-1cp" kind="show" id="Y9c-EY-Kgh"/>
+                        <segue destination="hYs-An-hXC" kind="show" id="NZD-pC-g1U"/>
+                        <segue destination="kkF-Bx-KuW" kind="show" id="jjU-nu-kfO"/>
+                        <segue destination="lgx-im-ZIh" kind="show" id="t84-SH-iHm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJb-Bb-9As" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -691,6 +813,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JWO-u6-o8P"/>
+        <segue reference="t84-SH-iHm"/>
     </inferredMetricsTieBreakers>
 </document>

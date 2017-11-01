@@ -36,6 +36,10 @@ class GetOrientationViewController: UIViewController {
         magneticOrientationLabel.text = "\(Int(magneticOrientation))°"
     }
     
+    @IBAction func onTouchNextButton(_ sender: Any) {
+        let next = self.storyboard!.instantiateViewController(withIdentifier: "GetRoadStepRssiStoryboard")
+        self.present(next,animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
