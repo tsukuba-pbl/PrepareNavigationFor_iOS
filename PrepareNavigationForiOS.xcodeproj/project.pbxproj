@@ -59,6 +59,7 @@
 		C283C3501F62EF27009D2723 /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C34F1F62EF27009D2723 /* TestService.swift */; };
 		C288D2361F566A9B00A3DBE1 /* BeaconEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288D2351F566A9B00A3DBE1 /* BeaconEntity.swift */; };
 		C288D2381F5677CB00A3DBE1 /* BeaconEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288D2371F5677CB00A3DBE1 /* BeaconEntityTests.swift */; };
+		C293A6001FAAB0C20099A807 /* UploadRouteDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */; };
 		C2962D571F5FC090004629CD /* LpfEuclidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2962D561F5FC090004629CD /* LpfEuclidTests.swift */; };
 		C2962D5F1F603496004629CD /* BeaconLoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2962D5E1F603496004629CD /* BeaconLoggerViewController.swift */; };
 		C2B26B8B1F43EC7E00E4B785 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B26B891F43EC7800E4B785 /* CoreLocation.framework */; };
@@ -163,6 +164,7 @@
 		C283C34F1F62EF27009D2723 /* TestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
 		C288D2351F566A9B00A3DBE1 /* BeaconEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconEntity.swift; sourceTree = "<group>"; };
 		C288D2371F5677CB00A3DBE1 /* BeaconEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconEntityTests.swift; sourceTree = "<group>"; };
+		C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRouteDataViewController.swift; sourceTree = "<group>"; };
 		C2962D561F5FC090004629CD /* LpfEuclidTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LpfEuclidTests.swift; sourceTree = "<group>"; };
 		C2962D5E1F603496004629CD /* BeaconLoggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLoggerViewController.swift; sourceTree = "<group>"; };
 		C2B26B891F43EC7800E4B785 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -303,6 +305,7 @@
 				C202BDBD1FA04EC60063F6F6 /* GetOrientationViewController.swift */,
 				C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */,
 				C26C54DB1FA9F8A800C8FD94 /* IsDestViewController.swift */,
+				C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				B1582FB51F963D87006686CD /* EventEntity.swift in Sources */,
 				B14883931F4560FD007A9E2E /* LocationService.swift in Sources */,
 				B14883A11F4B023E007A9E2E /* SlackService.swift in Sources */,
+				C293A6001FAAB0C20099A807 /* UploadRouteDataViewController.swift in Sources */,
 				C2962D5F1F603496004629CD /* BeaconLoggerViewController.swift in Sources */,
 				B15B71591F5E69C600B56551 /* Lpf.swift in Sources */,
 				B14883451F3C4D32007A9E2E /* HomeViewController.swift in Sources */,

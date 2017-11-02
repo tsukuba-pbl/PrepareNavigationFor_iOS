@@ -22,7 +22,7 @@ class IsDestViewController: UIViewController {
     }
     
     @IBAction func OnTouchNoButton(_ sender: Any) {
-        let next = self.storyboard!.instantiateViewController(withIdentifier: "RouteStoryboard")
+        let next = self.storyboard!.instantiateViewController(withIdentifier: "IsDestStoryboard")
         self.present(next,animated: true, completion: nil)
     }
     
