@@ -93,6 +93,7 @@ class BeaconLoggerController : NSObject{
             if(timer.isValid){
                 timer.invalidate()
             }
+            
             //トレーニングデータを送信する
             sendTrainData()
         #endif
@@ -107,7 +108,6 @@ class BeaconLoggerController : NSObject{
         message += "route id, \(routeId)\n"
         
         SlackService.postBeaconLog(log: message, tag: "Beacon Logger")
-        
         for value in self.getMessages() {
             SlackService.postBeaconLog(log: value, tag: "Beacon Logger")
         }
