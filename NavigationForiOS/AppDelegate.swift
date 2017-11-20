@@ -14,6 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var eventInfo: EventEntity?
+    
+    //ナビゲーション情報を格納する
+    var navigationDataEntity: NavigationDataEntity?
   
     //RouteViewControllerでdestinationの値を保持するために利用する
     var source: String?
