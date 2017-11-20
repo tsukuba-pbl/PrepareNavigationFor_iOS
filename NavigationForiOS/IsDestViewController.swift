@@ -22,7 +22,7 @@ class IsDestViewController: UIViewController {
     }
     
     @IBAction func OnTouchNoButton(_ sender: Any) {
-        let next = self.storyboard!.instantiateViewController(withIdentifier: "IsDestStoryboard")
+        let next = self.storyboard!.instantiateViewController(withIdentifier: "GetOrientationStoryBoard")
         self.present(next,animated: true, completion: nil)
     }
     

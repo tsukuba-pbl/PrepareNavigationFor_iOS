@@ -30,7 +30,7 @@ class GetRoadStepRssiViewController: UIViewController {
     }
     
     @IBAction func onTouchNextButton(_ sender: Any) {
-        let next = self.storyboard!.instantiateViewController(withIdentifier: "IsDestStoryboard")
+        let next = self.storyboard!.instantiateViewController(withIdentifier: "GetBeaconRssiStoryboard")
         self.present(next,animated: true, completion: nil)
     }
 

@@ -37,6 +37,9 @@ class GetOrientationViewController: UIViewController {
     }
     
     @IBAction func onTouchNextButton(_ sender: Any) {
+        //route Idをインクリメント
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.currentRouteId = appDelegate.currentRouteId! + 1
         let next = self.storyboard!.instantiateViewController(withIdentifier: "GetRoadStepRssiStoryboard")
         self.present(next,animated: true, completion: nil)
     }
