@@ -9,14 +9,33 @@
 import Foundation
 import UIKit
 
-class GetRoadStepRssiViewController: UIViewController {
+class GetRoadStepRssiViewController: UIViewController , BeaconLoggerVCDelegate{
     let pedometerService = PedometerService()
     var Steps = 0
+    
+    var navigations : NavigationEntity = NavigationEntity()
+    var beaconLogger : BeaconLoggerController?
     
     @IBOutlet weak var StepsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //RouteViewControllerで設定した目的地をAppDelegateから取得
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let routeId = appDelegate.currentRouteId
+        
+        //ビーコンの計測を開始する
+        //使用するビーコンのminor idを設定する
+        //使用するビーコンのMinor Idを設定
+        BeaconLoggerService.getBeaconMinorIdList { response in
+            //JSONで取得
+            self.navigations.setReceiveMinorIdList(minorIdList: response)
+            //受信するビーコンの情報を与え、受信を開始する
+            self.beaconLogger = BeaconLoggerController(navigations : self.navigations, delegate: self)
+            //計測を開始する
+            self.beaconLogger?.startBeaconLogger(routeId: routeId!)
+        }
         
         //歩数計測を開始する
         pedometerService.start_pedometer()
@@ -30,6 +49,7 @@ class GetRoadStepRssiViewController: UIViewController {
     }
     
     @IBAction func onTouchNextButton(_ sender: Any) {
+        self.beaconLogger?.stopBeaconLogger()
         let next = self.storyboard!.instantiateViewController(withIdentifier: "GetBeaconRssiStoryboard")
         self.present(next,animated: true, completion: nil)
     }

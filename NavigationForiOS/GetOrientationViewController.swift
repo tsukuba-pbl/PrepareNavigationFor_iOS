@@ -37,12 +37,15 @@ class GetOrientationViewController: UIViewController {
     }
     
     @IBAction func onTouchNextButton(_ sender: Any) {
+        //方向を送信する
+        SlackService.postError(error: "Orientation", tag: "\(Int(magneticOrientation))°")
         //route Idをインクリメント
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.currentRouteId = appDelegate.currentRouteId! + 1
         let next = self.storyboard!.instantiateViewController(withIdentifier: "GetRoadStepRssiStoryboard")
         self.present(next,animated: true, completion: nil)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -68,6 +68,7 @@
 		C2B26B921F471E3100E4B785 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B26B911F471E3100E4B785 /* BeaconManager.swift */; };
 		C2B26B941F490D3200E4B785 /* BeaconManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B26B931F490D3200E4B785 /* BeaconManagerTests.swift */; };
 		C2C22FD11F722133007FCD27 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C22FD01F722133007FCD27 /* SpeechService.swift */; };
+		C2EA5D0B1FC2A489009571D6 /* NavigationDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5D0A1FC2A489009571D6 /* NavigationDataEntity.swift */; };
 		EB19270E1F73EF3F008C92FB /* MagneticSensorSerivice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB19270D1F73EF3F008C92FB /* MagneticSensorSerivice.swift */; };
 		EB1927101F74C82F008C92FB /* MagneticSensorServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB19270F1F74C82F008C92FB /* MagneticSensorServiceTests.swift */; };
 		EB432FDC1F4D603A00FAC0EB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB432FDB1F4D603A00FAC0EB /* CoreMotion.framework */; };
@@ -173,6 +174,7 @@
 		C2B26B911F471E3100E4B785 /* BeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		C2B26B931F490D3200E4B785 /* BeaconManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManagerTests.swift; sourceTree = "<group>"; };
 		C2C22FD01F722133007FCD27 /* SpeechService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		C2EA5D0A1FC2A489009571D6 /* NavigationDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDataEntity.swift; sourceTree = "<group>"; };
 		EB19270D1F73EF3F008C92FB /* MagneticSensorSerivice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagneticSensorSerivice.swift; sourceTree = "<group>"; };
 		EB19270F1F74C82F008C92FB /* MagneticSensorServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagneticSensorServiceTests.swift; sourceTree = "<group>"; };
 		EB432FDB1F4D603A00FAC0EB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -327,6 +329,7 @@
 				C2052B261F4D6557001098DE /* NavigationEntity.swift */,
 				C288D2351F566A9B00A3DBE1 /* BeaconEntity.swift */,
 				B1582FB41F963D87006686CD /* EventEntity.swift */,
+				C2EA5D0A1FC2A489009571D6 /* NavigationDataEntity.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				C21301841F66780B00D966A9 /* KNN.swift in Sources */,
 				B14883851F435BF1007A9E2E /* NavigationViewController.swift in Sources */,
 				C27DDB711F57F6BF00A894C4 /* NavigationStateController.swift in Sources */,
+				C2EA5D0B1FC2A489009571D6 /* NavigationDataEntity.swift in Sources */,
 				B14883431F3C4D32007A9E2E /* AppDelegate.swift in Sources */,
 				C2C22FD11F722133007FCD27 /* SpeechService.swift in Sources */,
 				C202BDBE1FA04EC60063F6F6 /* GetOrientationViewController.swift in Sources */,
