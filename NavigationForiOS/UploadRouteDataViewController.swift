@@ -14,6 +14,8 @@ class UploadRouteDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.navigationDataEntity.getNavigationDataAsJson()
     }
     
     @IBAction func onTouchButton(_ sender: Any) {

@@ -40,10 +40,11 @@ class GetOrientationViewController: UIViewController {
     
     @IBAction func onTouchNextButton(_ sender: Any) {
         //角度を格納
-        appDelegate.navigationDataEntity?.addOrientationData(routeId: appDelegate.currentRouteId!, orientation: Int(magneticOrientation))
+        appDelegate.navigationDataEntity.addOrientationData(routeId: appDelegate.currentRouteId!, orientation: Int(magneticOrientation))
         
         //route Idをインクリメント
         appDelegate.currentRouteId = appDelegate.currentRouteId! + 1
+        print(appDelegate.currentRouteId)
         //方向を送信する
         SlackService.postError(error: "Orientation", tag: "\(Int(magneticOrientation))°")
         let next = self.storyboard!.instantiateViewController(withIdentifier: "GetRoadStepRssiStoryboard")

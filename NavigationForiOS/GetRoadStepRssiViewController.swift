@@ -15,6 +15,7 @@ class GetRoadStepRssiViewController: UIViewController , BeaconLoggerVCDelegate{
     
     var navigations : NavigationEntity = NavigationEntity()
     var beaconLogger : BeaconLoggerController?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var StepsLabel: UILabel!
     
@@ -22,7 +23,6 @@ class GetRoadStepRssiViewController: UIViewController , BeaconLoggerVCDelegate{
         super.viewDidLoad()
         
         //RouteViewControllerで設定した目的地をAppDelegateから取得
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let routeId = appDelegate.currentRouteId
         
         //ビーコンの計測を開始する
@@ -49,7 +49,10 @@ class GetRoadStepRssiViewController: UIViewController , BeaconLoggerVCDelegate{
     }
     
     @IBAction func onTouchNextButton(_ sender: Any) {
+        //記録を停止
         self.beaconLogger?.stopBeaconLogger()
+        //route Idをインクリメント
+        appDelegate.currentRouteId = appDelegate.currentRouteId! + 1
         let next = self.storyboard!.instantiateViewController(withIdentifier: "GetBeaconRssiStoryboard")
         self.present(next,animated: true, completion: nil)
     }
