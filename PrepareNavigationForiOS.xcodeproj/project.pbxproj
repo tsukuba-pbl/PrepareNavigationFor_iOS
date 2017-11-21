@@ -51,6 +51,7 @@
 		C20B11931F74B76D004915B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20B11921F74B76D004915B4 /* AVFoundation.framework */; };
 		C21301841F66780B00D966A9 /* KNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21301831F66780B00D966A9 /* KNN.swift */; };
 		C21301861F67815700D966A9 /* kNNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21301851F67815700D966A9 /* kNNTests.swift */; };
+		C21FA4941FC2E6250066AEF0 /* AreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21FA4931FC2E6250066AEF0 /* AreaEntity.swift */; };
 		C26C54DA1FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */; };
 		C26C54DC1FA9F8A800C8FD94 /* IsDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C54DB1FA9F8A800C8FD94 /* IsDestViewController.swift */; };
 		C27DDB711F57F6BF00A894C4 /* NavigationStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27DDB701F57F6BF00A894C4 /* NavigationStateController.swift */; };
@@ -157,6 +158,7 @@
 		C20B11921F74B76D004915B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C21301831F66780B00D966A9 /* KNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNN.swift; sourceTree = "<group>"; };
 		C21301851F67815700D966A9 /* kNNTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kNNTests.swift; sourceTree = "<group>"; };
+		C21FA4931FC2E6250066AEF0 /* AreaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaEntity.swift; sourceTree = "<group>"; };
 		C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoadStepRssiViewController.swift; sourceTree = "<group>"; };
 		C26C54DB1FA9F8A800C8FD94 /* IsDestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsDestViewController.swift; sourceTree = "<group>"; };
 		C27DDB701F57F6BF00A894C4 /* NavigationStateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStateController.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				C288D2351F566A9B00A3DBE1 /* BeaconEntity.swift */,
 				B1582FB41F963D87006686CD /* EventEntity.swift */,
 				C2EA5D0A1FC2A489009571D6 /* NavigationDataEntity.swift */,
+				C21FA4931FC2E6250066AEF0 /* AreaEntity.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				C20352B41F6A401100891AF9 /* BeaconLoggerService.swift in Sources */,
 				B15B715B1F5E6A3900B56551 /* LpfEucild.swift in Sources */,
 				B160F49E1F5286BA00169231 /* SwinjectStoryboard.swift in Sources */,
+				C21FA4941FC2E6250066AEF0 /* AreaEntity.swift in Sources */,
 				C202BDBC1F9F2A4C0063F6F6 /* StartCreateRouteViewController.swift in Sources */,
 				B148839F1F4592B5007A9E2E /* EventService.swift in Sources */,
 				EB80B5FE1F4EA91A00349958 /* PedometerService.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 // ポイントごとの電波強度の事前計測データとそのID
 struct TRAIN_DATA{
@@ -42,12 +43,10 @@ class NavigationDataEntity{
         orientationDataList.append(ORIENTATION_DATA(routeId: routeId, orientation: orientation))
     }
     
-    public func getNavigationDataAsJson(){
-        var jsonData = ""
+    //記録した情報からナビゲーションオブジェクトを生成する
+    func getNavigationObject() -> Parameters{
+        var areas : Array<AreaEntity> = []
         
-        jsonData += "{ \"routes\": ["
-        
-        //ルートごとに生成
         trainDataList.forEach { (traindata) in
             let routeId = traindata.routeId
             let rssiList = traindata.trainData
@@ -56,36 +55,72 @@ class NavigationDataEntity{
                 orientation = 0
             }
             
-            //JSONの書き出し
-            jsonData += "{"
-            jsonData += "\"routeId\": \(routeId),"
-            jsonData += "\"navigation\": \(getNavigationText(routeId: routeId)),"
-            jsonData += "\"isStart\": \(routeId == 1 ? 1 : 0),"
-            jsonData += "\"isGoal\": \(routeId == trainDataList.count ? 1 : 0),"
-            jsonData += "\"isCrossroad\": \(routeId % 2 == 1 ? 1 : 0),"
-            jsonData += "\"isRoad\": \(routeId % 2 == 0 ? 1 : 0),"
-            jsonData += "\"rotateDegree\": \(getRotateDegree(routeId: routeId)),"
-            jsonData += "\"steps\": 100,"
-            //電波強度の書き出し開始
-            jsonData += "\"beacons\": ["
+            //オブジェクトへの書き出し
+            let navigation_text = getNavigationText(routeId: routeId)
+            let isStart = routeId == 1 ? 1 : 0
+            let isGoal = routeId == trainDataList.count ? 1 : 0
+            let isCrossroad = routeId % 2 == 1 ? 1 : 0
+            let isRoad = routeId % 2 == 0 ? 1 : 0
+            let rotateDegree = getRotateDegree(routeId: routeId)
+            let steps = 100
             
-            rssiList.forEach({ (rssiData) in
-                jsonData += "["
-                for (id, rssi) in rssiData{
-                    jsonData += "{\"minorId\": \(id),\"rssi\": \(rssi)},"
-                }
-                jsonData += "],"
-            })
-            
-            jsonData += "]"
-            //電波強度の書き出し書き出し終了
-            jsonData += "},"
+            let area = AreaEntity(routeId: routeId, navigation: navigation_text, isStart: isStart, isGoal: isGoal, isCrossroad: isCrossroad, isRoad: isRoad, rotateDegree: rotateDegree, steps: steps, beacons: rssiList )
+            areas.append(area)
         }
         
-        jsonData += "]}"
-        print(jsonData)
+        let parameters: Parameters = [
+            "routes" : areas
+        ]
+    
+        return parameters
     }
     
+//    //JSON書き出し
+//    public func getNavigationDataAsJson(){
+//        var jsonData = ""
+//
+//        jsonData += "{ \"routes\": ["
+//
+//        //ルートごとに生成
+//        trainDataList.forEach { (traindata) in
+//            let routeId = traindata.routeId
+//            let rssiList = traindata.trainData
+//            var orientation = orientationDataList.filter({$0.routeId == routeId}).first?.orientation
+//            if(orientation == nil){
+//                orientation = 0
+//            }
+//
+//            //JSONの書き出し
+//            jsonData += "{"
+//            jsonData += "\"routeId\": \(routeId),"
+//            jsonData += "\"navigation\":" + "\"" + getNavigationText(routeId: routeId) + "\"" + ","
+//            jsonData += "\"isStart\": \(routeId == 1 ? 1 : 0),"
+//            jsonData += "\"isGoal\": \(routeId == trainDataList.count ? 1 : 0),"
+//            jsonData += "\"isCrossroad\": \(routeId % 2 == 1 ? 1 : 0),"
+//            jsonData += "\"isRoad\": \(routeId % 2 == 0 ? 1 : 0),"
+//            jsonData += "\"rotateDegree\": \(getRotateDegree(routeId: routeId)),"
+//            jsonData += "\"steps\": 100,"
+//            //電波強度の書き出し開始
+//            jsonData += "\"beacons\": ["
+//
+//            rssiList.forEach({ (rssiData) in
+//                jsonData += "["
+//                for (id, rssi) in rssiData{
+//                    jsonData += "{\"minorId\": \(id),\"rssi\": \(rssi)},"
+//                }
+//                jsonData += "],"
+//            })
+//
+//            jsonData += "]"
+//            //電波強度の書き出し書き出し終了
+//            jsonData += "},"
+//        }
+//
+//        jsonData += "]}"
+//        print(jsonData)
+//    }
+    
+    //ナビゲーション内容をrouteIdから出す
     func getNavigationText(routeId: Int) -> String{
         var navigationText = ""
         if(routeId == 1){ //最初
@@ -101,9 +136,10 @@ class NavigationDataEntity{
                 navigationText = "右折です"
             }
         }
-        return "\"" + navigationText + "\""
+        return navigationText
     }
     
+    //routeIdから，回転方向を出す
     func getRotateDegree(routeId: Int) -> Int{
         var deg = 0
         if(routeId == 1){
