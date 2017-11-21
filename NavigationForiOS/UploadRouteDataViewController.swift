@@ -8,17 +8,23 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class UploadRouteDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.navigationDataEntity.getNavigationObject()
     }
     
     @IBAction func onTouchButton(_ sender: Any) {
+        //取得したデータをパラメータ形式で取得する
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let params = appDelegate.navigationDataEntity.getNavigationObjectAsParams()
+        //サーバに送信する
+        let navigationDataService = NavigationDataService()
+        navigationDataService.sendNavigationData(params: params)
+        
         let next = self.storyboard!.instantiateViewController(withIdentifier: "RouteStoryboard")
         self.present(next,animated: true, completion: nil)
     }
