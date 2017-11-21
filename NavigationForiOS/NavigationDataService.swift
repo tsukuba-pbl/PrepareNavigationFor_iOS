@@ -10,9 +10,14 @@ import Foundation
 import Alamofire
 
 class NavigationDataService{
-    private let apiUrl = "hoge"
+    private let apiUrl = "http://localhost:8000/test.php"
     
     public func sendNavigationData(params: Parameters){
         Alamofire.request(apiUrl, method: .post, parameters: params)
+            .responseJSON{ response in
+                print("-------------------------")
+                print(response)
+                print("-------------------------")
+        }
     }
 }
