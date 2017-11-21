@@ -10,10 +10,17 @@ import Foundation
 import Alamofire
 
 class NavigationDataService{
-    private let apiUrl = "http://localhost:8000/test.php"
+    private let apiUrl = "http://192.168.0.106/api/routes/1"
     
     public func sendNavigationData(params: Parameters){
-        Alamofire.request(apiUrl, method: .post, parameters: params)
+        let serverTrustPolicies: [String: ServerTrustPolicy] = [
+            "192.168.0.106": .disableEvaluation
+        ]
+        let sessionManager = SessionManager(
+            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+        )
+        
+        sessionManager.request(apiUrl, method: .post, parameters: params)
             .responseJSON{ response in
                 print("-------------------------")
                 print(response)
