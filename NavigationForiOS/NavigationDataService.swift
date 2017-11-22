@@ -18,13 +18,20 @@ class NavigationDataService{
         networkManager = NetworkManager()
     }
     
+    //ナビゲーションデータを送信する
     public func sendNavigationData(params: Parameters){
         
         Alamofire.request(apiUrl, method: .post, parameters: params, encoding: JSONEncoding.default)
             .responseJSON{ response in
-                    print("-------------------------")
-                    print(response)
-                    print("-------------------------")
+                switch response.result {
+                case .success(let response):
+                    //送信成功時
+                    //なんかそれっぽい処理があったらいいかも
+                    break
+                case .failure(let error):
+                    SlackService.postError(error: error.localizedDescription, tag: "NavigationDataService")
+                    break
+                }
             }
 
     }
@@ -56,6 +63,7 @@ class NavigationDataService{
             areasArrayObj.append(areaJsonObj)
         }
         
+        //パラメータ生成
         let params : Parameters = [
             "eventId" : eventId,
             "sourceName" : sourceName,
