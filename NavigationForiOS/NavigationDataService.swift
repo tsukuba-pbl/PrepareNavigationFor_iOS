@@ -10,13 +10,9 @@ import Foundation
 import Alamofire
 
 class NavigationDataService{
+    //↓のURLでお願いします
     private let apiUrl = "http://minajun2.local/api/train/test"
-    var networkManager : NetworkManager?
     let sessionManager = Alamofire.SessionManager.default
-    
-    init(){
-        networkManager = NetworkManager()
-    }
     
     //ナビゲーションデータを送信する
     public func sendNavigationData(params: Parameters){
