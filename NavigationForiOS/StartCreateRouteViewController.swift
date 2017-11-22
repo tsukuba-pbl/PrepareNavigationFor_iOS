@@ -18,7 +18,7 @@ class StartRouteCreateViewController: UIViewController {
         
         //RouteViewControllerで設定した目的地をAppDelegateから取得
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let source = appDelegate.source!
+        let source = appDelegate.departure!
         //計測を行うroute idを設定
         appDelegate.currentRouteId = 1
         //Route設定画面で指定された開始地点の名前を表示する
