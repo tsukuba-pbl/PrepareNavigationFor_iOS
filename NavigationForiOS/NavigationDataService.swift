@@ -28,7 +28,7 @@ class NavigationDataService{
                 }
     }
     
-    func getNavigationDataAsJSON(areaArray: Array<AreaEntity>) -> Parameters{
+    func getNavigationDataAsParams(eventId: Int, sourceName: String, destinationName: String, areaArray: Array<AreaEntity>) -> Parameters{
         var areasArrayObj = Array<Any>()
         
         areaArray.forEach { (area) in
@@ -55,7 +55,11 @@ class NavigationDataService{
             areasArrayObj.append(areaJsonObj)
         }
         
-        let params : Parameters = ["routes" : areasArrayObj]
+        let params : Parameters = [
+            "eventId" : eventId,
+            "sourceName" : sourceName,
+            "destinationName" : destinationName,
+            "routes" : areasArrayObj]
         
         return params
     }

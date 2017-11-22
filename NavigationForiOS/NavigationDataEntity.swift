@@ -71,51 +71,6 @@ class NavigationDataEntity{
         return areas
     }
     
-//    //JSON書き出し
-//    public func getNavigationDataAsJson(){
-//        var jsonData = ""
-//
-//        jsonData += "{ \"routes\": ["
-//
-//        //ルートごとに生成
-//        trainDataList.forEach { (traindata) in
-//            let routeId = traindata.routeId
-//            let rssiList = traindata.trainData
-//            var orientation = orientationDataList.filter({$0.routeId == routeId}).first?.orientation
-//            if(orientation == nil){
-//                orientation = 0
-//            }
-//
-//            //JSONの書き出し
-//            jsonData += "{"
-//            jsonData += "\"routeId\": \(routeId),"
-//            jsonData += "\"navigation\":" + "\"" + getNavigationText(routeId: routeId) + "\"" + ","
-//            jsonData += "\"isStart\": \(routeId == 1 ? 1 : 0),"
-//            jsonData += "\"isGoal\": \(routeId == trainDataList.count ? 1 : 0),"
-//            jsonData += "\"isCrossroad\": \(routeId % 2 == 1 ? 1 : 0),"
-//            jsonData += "\"isRoad\": \(routeId % 2 == 0 ? 1 : 0),"
-//            jsonData += "\"rotateDegree\": \(getRotateDegree(routeId: routeId)),"
-//            jsonData += "\"steps\": 100,"
-//            //電波強度の書き出し開始
-//            jsonData += "\"beacons\": ["
-//
-//            rssiList.forEach({ (rssiData) in
-//                jsonData += "["
-//                for (id, rssi) in rssiData{
-//                    jsonData += "{\"minorId\": \(id),\"rssi\": \(rssi)},"
-//                }
-//                jsonData += "],"
-//            })
-//
-//            jsonData += "]"
-//            //電波強度の書き出し書き出し終了
-//            jsonData += "},"
-//        }
-//
-//        jsonData += "]}"
-//        print(jsonData)
-//    }
-    
     //ナビゲーション内容をrouteIdから出す
     func getNavigationText(routeId: Int) -> String{
         var navigationText = ""
