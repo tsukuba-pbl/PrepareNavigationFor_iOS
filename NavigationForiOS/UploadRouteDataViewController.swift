@@ -21,9 +21,8 @@ class UploadRouteDataViewController: UIViewController {
         
         //サーバに送信する
         let navigationDataService = NavigationDataService()
-        let jsonString = navigationDataService.getNavigationDataAsJSON(areaArray: navigationAreas)
-        print(jsonString)
-        //navigationDataService.sendNavigationData(params: params)
+        let params = navigationDataService.getNavigationDataAsJSON(areaArray: navigationAreas)
+        navigationDataService.sendNavigationData(params: params)
     }
     
     @IBAction func onTouchButton(_ sender: Any) {

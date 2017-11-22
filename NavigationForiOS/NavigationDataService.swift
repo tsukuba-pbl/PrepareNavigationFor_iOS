@@ -19,25 +19,16 @@ class NavigationDataService{
     }
     
     public func sendNavigationData(params: Parameters){
-//        networkManager?.manager?.request(apiUrl, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil)
-//            .responseJSON{ response in
-//                print("-------------------------")
-//                print(response)
-//                print("-------------------------")
-//        }
-        
-        sessionManager.request(apiUrl, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil)
+
+        sessionManager.request(apiUrl, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
                     .responseJSON{ response in
                         print("-------------------------")
                         print(response)
                         print("-------------------------")
                 }
-        
-    
     }
     
-    func getNavigationDataAsJSON(areaArray: Array<AreaEntity>) -> String{
-        var jsonStr = ""
+    func getNavigationDataAsJSON(areaArray: Array<AreaEntity>) -> Parameters{
         var areasArrayObj = Array<Any>()
         
         areaArray.forEach { (area) in
@@ -64,15 +55,8 @@ class NavigationDataService{
             areasArrayObj.append(areaJsonObj)
         }
         
-        let jsonObj = ["routes": areasArrayObj]
+        let params : Parameters = ["routes" : areasArrayObj]
         
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: jsonObj, options: [])
-            jsonStr = String(bytes: jsonData, encoding: .utf8)!
-        } catch let error {
-            print(error)
-        }
-        
-        return jsonStr
+        return params
     }
 }
