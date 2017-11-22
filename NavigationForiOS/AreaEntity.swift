@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AreaEntity{
+class AreaEntity: NSObject{
     public let routeId :Int
     public let navigation : String
     public let isStart : Int
@@ -17,7 +17,7 @@ class AreaEntity{
     public let isRoad : Int
     public let rotateDegree : Int
     public let steps : Int
-    public let beacons : Array<Dictionary<Int, Int>>
+    public var beacons :Array<Dictionary<Int, Int>>
     
     init(routeId: Int, navigation: String, isStart: Int, isGoal: Int, isCrossroad: Int, isRoad: Int, rotateDegree: Int, steps: Int, beacons: Array<Dictionary<Int, Int>>){
         self.routeId = routeId
@@ -30,4 +30,5 @@ class AreaEntity{
         self.steps = steps
         self.beacons = beacons
     }
+    
 }

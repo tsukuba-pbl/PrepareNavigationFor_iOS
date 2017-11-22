@@ -44,7 +44,7 @@ class NavigationDataEntity{
     }
     
     //記録した情報からナビゲーションオブジェクトを生成する
-    func getNavigationObjectAsParams() -> Parameters{
+    func getNavigationAreas() -> Array<AreaEntity>{
         var areas : Array<AreaEntity> = []
         
         trainDataList.forEach { (traindata) in
@@ -68,11 +68,7 @@ class NavigationDataEntity{
             areas.append(area)
         }
         
-        let parameters: Parameters = [
-            "routes" : areas
-        ]
-    
-        return parameters
+        return areas
     }
     
 //    //JSON書き出し

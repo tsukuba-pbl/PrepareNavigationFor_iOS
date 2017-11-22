@@ -17,10 +17,13 @@ class UploadRouteDataViewController: UIViewController {
         
         //取得したデータをパラメータ形式で取得する
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let params = appDelegate.navigationDataEntity.getNavigationObjectAsParams()
+        let navigationAreas = appDelegate.navigationDataEntity.getNavigationAreas()
+        
         //サーバに送信する
         let navigationDataService = NavigationDataService()
-        navigationDataService.sendNavigationData(params: params)
+        let jsonString = navigationDataService.getNavigationDataAsJSON(areaArray: navigationAreas)
+        print(jsonString)
+        //navigationDataService.sendNavigationData(params: params)
     }
     
     @IBAction func onTouchButton(_ sender: Any) {
