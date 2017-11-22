@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class NavigationDataService{
-    private let apiUrl = "https://httpbin.org/post"
+    private let apiUrl = "http://minajun2.local/api/train/test"
     var networkManager : NetworkManager?
     let sessionManager = Alamofire.SessionManager.default
     
@@ -19,13 +19,14 @@ class NavigationDataService{
     }
     
     public func sendNavigationData(params: Parameters){
+        
+        Alamofire.request(apiUrl, method: .post, parameters: params, encoding: JSONEncoding.default)
+            .responseJSON{ response in
+                    print("-------------------------")
+                    print(response)
+                    print("-------------------------")
+            }
 
-        sessionManager.request(apiUrl, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
-                    .responseJSON{ response in
-                        print("-------------------------")
-                        print(response)
-                        print("-------------------------")
-                }
     }
     
     func getNavigationDataAsParams(eventId: Int, sourceName: String, destinationName: String, areaArray: Array<AreaEntity>) -> Parameters{
