@@ -7,8 +7,11 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+<<<<<<< HEAD
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string></string>
+=======
+>>>>>>> feature_get_event
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
