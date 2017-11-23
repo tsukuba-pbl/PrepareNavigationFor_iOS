@@ -23,6 +23,7 @@ class NavigationDataService{
                 case .success(let response):
                     //送信成功時
                     //なんかそれっぽい処理があったらいいかも
+                    print(response)
                     break
                 case .failure(let error):
                     SlackService.postError(error: error.localizedDescription, tag: "NavigationDataService")
@@ -64,7 +65,7 @@ class NavigationDataService{
             "eventId" : eventId,
             "sourceName" : sourceName,
             "destinationName" : destinationName,
-            "routes" : areasArrayObj]
+            "areas" : areasArrayObj]
         
         return params
     }
