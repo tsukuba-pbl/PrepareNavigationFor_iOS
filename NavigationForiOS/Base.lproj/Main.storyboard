@@ -132,8 +132,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日時" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1w-3g-Rqu">
-                                <rect key="frame" x="53" y="264" width="35" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="開始日時" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1w-3g-Rqu">
+                                <rect key="frame" x="53" y="264" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -147,14 +147,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="場所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-d3-vdp">
-                                <rect key="frame" x="53" y="332" width="35" height="21"/>
+                                <rect key="frame" x="53" y="385" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNe-yx-Uom">
-                                <rect key="frame" x="68" y="358" width="268" height="26"/>
+                                <rect key="frame" x="68" y="411" width="268" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="終了日時" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrj-2I-Fh6">
+                                <rect key="frame" x="53" y="324" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGl-4H-8D0">
+                                <rect key="frame" x="68" y="350" width="268" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -172,6 +186,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="eventDate" destination="K4E-Zb-PJh" id="PAs-zc-Up9"/>
+                        <outlet property="eventEndDate" destination="sGl-4H-8D0" id="wug-0j-qNE"/>
                         <outlet property="eventInfo" destination="u7E-lt-nK0" id="VNe-nC-7H6"/>
                         <outlet property="eventLocation" destination="aNe-yx-Uom" id="Hol-Vk-BdH"/>
                         <outlet property="eventName" destination="kcu-Vp-K18" id="sG6-WG-QYf"/>
@@ -577,7 +592,7 @@
         <!--Navigation View Controller-->
         <scene sceneID="6tV-IG-eGi">
             <objects>
-                <viewController storyboardIdentifier="NavigationStoryboard" id="Ky4-t3-5XS" customClass="NavigationViewController" customModule="NavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NavigationStoryboard" id="Ky4-t3-5XS" customClass="NavigationViewController" customModule="PrepareNavigationForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P5x-h4-Dah"/>
                         <viewControllerLayoutGuide type="bottom" id="sOu-8H-3fm"/>
@@ -688,6 +703,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bdz-82-WGe"/>
+        <segue reference="JWO-u6-o8P"/>
     </inferredMetricsTieBreakers>
 </document>

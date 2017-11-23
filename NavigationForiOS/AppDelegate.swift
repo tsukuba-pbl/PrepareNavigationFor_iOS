@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var eventInfo: EventEntity?
   
     //RouteViewControllerでdestinationの値を保持するために利用する
-    var source: String?
     var destination: String?
+    var departure: String?
     
     //BeaconLoggerに対してrouteIdを渡したいときに利用する
     var currentRouteId: Int?
