@@ -79,7 +79,20 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     
     //次の遷移
     @IBAction func OnTouchNext(_ sender: Any) {
-        let next = self.storyboard!.instantiateViewController(withIdentifier: "GetOrientationStoryBoard")
+        //最初の時とそれ以外の時で遷移先が変わる
+        //routeId = 1のとき最初として判断する
+        //最初 -> 方向計測
+        //2回目以降 -> 目的地かどうか？
+        //route idを取得
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let routeId = appDelegate.currentRouteId
+        
+        var next = self.storyboard!.instantiateViewController(withIdentifier: "IsDestStoryboard")
+        //route idが1のときは，方向計測に遷移
+        if(routeId == 1){
+            next = self.storyboard!.instantiateViewController(withIdentifier: "GetOrientationStoryBoard")
+        }
+        
         self.present(next,animated: true, completion: nil)
     }
     //ビューの更新

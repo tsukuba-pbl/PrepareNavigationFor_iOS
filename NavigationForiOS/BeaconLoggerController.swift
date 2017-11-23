@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol BeaconLoggerVCDelegate {
     func updateView()
@@ -21,6 +22,8 @@ class BeaconLoggerController : NSObject{
     var state = false
     var delegate: BeaconLoggerVCDelegate?
     var routeId = 1
+
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     /// イニシャライザ
     ///
@@ -85,6 +88,10 @@ class BeaconLoggerController : NSObject{
                 if(timer.isValid){
                     timer.invalidate()
                 }
+                
+                //トレーニングデータを格納する
+                appDelegate.navigationDataEntity.addTrainData(routeId: appDelegate.currentRouteId!, trainData: trainData)
+                
                 //トレーニングデータを送信する
                 sendTrainData()
             }
@@ -93,6 +100,10 @@ class BeaconLoggerController : NSObject{
             if(timer.isValid){
                 timer.invalidate()
             }
+            
+            //トレーニングデータを格納する
+            appDelegate.navigationDataEntity?.addTrainData(routeId: appDelegate.currentRouteId!, trainData: trainData)
+            
             //トレーニングデータを送信する
             sendTrainData()
         #endif
@@ -107,7 +118,6 @@ class BeaconLoggerController : NSObject{
         message += "route id, \(routeId)\n"
         
         SlackService.postBeaconLog(log: message, tag: "Beacon Logger")
-        
         for value in self.getMessages() {
             SlackService.postBeaconLog(log: value, tag: "Beacon Logger")
         }
