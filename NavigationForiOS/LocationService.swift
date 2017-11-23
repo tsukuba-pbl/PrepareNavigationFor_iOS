@@ -16,11 +16,11 @@ class LocationService {
     ///
     /// - Returns: 地点を含む配列
     static func getLocations(responseLocations: @escaping ([String]) -> Void){
+        
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let eventInfo = appDelegate.eventInfo!
         if let eventId = eventInfo.id {
-//            Alamofire.request("\(Const().URL_API)/events/\(eventId)/locations")
-            Alamofire.request("\(Const().URL_API)/events/0kzrV/locations")
+            Alamofire.request("\(Const().URL_API)/events/\(eventId)/locations")
                 .responseJSON { response in
                     debugPrint(response)
                     var locations: [String] = []
