@@ -21,7 +21,7 @@ class UploadRouteDataViewController: UIViewController {
         
         //サーバに送信する
         let navigationDataService = NavigationDataService()
-        let params = navigationDataService.getNavigationDataAsParams(eventId: 1, sourceName: appDelegate.departure!, destinationName: appDelegate.destination!, areaArray: navigationAreas)
+        let params = navigationDataService.getNavigationDataAsParams(eventId: "0kzrV", sourceName: appDelegate.departure!, destinationName: appDelegate.destination!, areaArray: navigationAreas)
         navigationDataService.sendNavigationData(params: params)
     }
     

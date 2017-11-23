@@ -33,7 +33,7 @@ class NavigationDataService{
 
     }
     
-    func getNavigationDataAsParams(eventId: Int, sourceName: String, destinationName: String, areaArray: Array<AreaEntity>) -> Parameters{
+    func getNavigationDataAsParams(eventId: String, sourceName: String, destinationName: String, areaArray: Array<AreaEntity>) -> Parameters{
         var areasArrayObj = Array<Any>()
         
         areaArray.forEach { (area) in
