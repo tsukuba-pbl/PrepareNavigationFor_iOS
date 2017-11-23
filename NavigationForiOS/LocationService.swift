@@ -9,27 +9,32 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import UIKit
 
 class LocationService {
     /// 会場にある各地点の名前を取得
     ///
     /// - Returns: 地点を含む配列
     static func getLocations(responseLocations: @escaping ([String]) -> Void){
-        Alamofire.request("https://gist.githubusercontent.com/ferretdayo/052e93d7c3067832e39f5ebe8cbfb004/raw/885aae273ae6b5d78380b917357e6827dba0de70/location.json")
-        .responseJSON { response in
-            var locations: [String] = []
-            switch response.result {
-            case .success(let response):
-                let locationJson = JSON(response)
-                locationJson["locations"].forEach{(_, data) in
-                    locations.append(data.string!)
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let eventInfo = appDelegate.eventInfo!
+        if let eventId = eventInfo.id {
+            Alamofire.request("http://localhost/api/events/\(eventId)/locations")
+            .responseJSON { response in
+                var locations: [String] = []
+                switch response.result {
+                case .success(let response):
+                    let locationJson = JSON(response)
+                    locationJson["locations"].forEach{(_, data) in
+                        locations.append(data["name"].string!)
+                    }
+                    break
+                case .failure(let error):
+                    SlackService.postError(error: error.localizedDescription, tag: "Location Service")
+                    break
                 }
-                break
-            case .failure(let error):
-                SlackService.postError(error: error.localizedDescription, tag: "Location Service")
-                break
+                responseLocations(locations)
             }
-            responseLocations(locations)
         }
     }
 }
