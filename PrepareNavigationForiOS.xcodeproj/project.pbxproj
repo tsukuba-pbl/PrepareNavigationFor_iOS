@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C373AC61FC69F9B00CB494D /* LocatonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C373AC51FC69F9B00CB494D /* LocatonEntity.swift */; };
+		9C373AC81FC6ADAC00CB494D /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C373AC71FC6ADAC00CB494D /* Const.swift */; };
 		B14883431F3C4D32007A9E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14883421F3C4D32007A9E2E /* AppDelegate.swift */; };
 		B14883451F3C4D32007A9E2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14883441F3C4D32007A9E2E /* HomeViewController.swift */; };
 		B148834A1F3C4D32007A9E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14883481F3C4D32007A9E2E /* Main.storyboard */; };
@@ -116,6 +118,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9C373AC51FC69F9B00CB494D /* LocatonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatonEntity.swift; sourceTree = "<group>"; };
+		9C373AC71FC6ADAC00CB494D /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		B148833F1F3C4D32007A9E2E /* PrepareNavigationForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrepareNavigationForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14883421F3C4D32007A9E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14883441F3C4D32007A9E2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 				B148834D1F3C4D32007A9E2E /* LaunchScreen.storyboard */,
 				B14883501F3C4D32007A9E2E /* Info.plist */,
 				B160F49D1F5286BA00169231 /* SwinjectStoryboard.swift */,
+				9C373AC71FC6ADAC00CB494D /* Const.swift */,
 			);
 			path = NavigationForiOS;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				B1582FB41F963D87006686CD /* EventEntity.swift */,
 				C2EA5D0A1FC2A489009571D6 /* NavigationDataEntity.swift */,
 				C21FA4931FC2E6250066AEF0 /* AreaEntity.swift */,
+				9C373AC51FC69F9B00CB494D /* LocatonEntity.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -548,6 +554,7 @@
 				B1582FB31F963287006686CD /* EventInfoViewController.swift in Sources */,
 				C21301841F66780B00D966A9 /* KNN.swift in Sources */,
 				B14883851F435BF1007A9E2E /* NavigationViewController.swift in Sources */,
+				9C373AC81FC6ADAC00CB494D /* Const.swift in Sources */,
 				C27DDB711F57F6BF00A894C4 /* NavigationStateController.swift in Sources */,
 				C2EA5D0B1FC2A489009571D6 /* NavigationDataEntity.swift in Sources */,
 				B14883431F3C4D32007A9E2E /* AppDelegate.swift in Sources */,
@@ -563,6 +570,7 @@
 				EBF3FC0B1F57F30E00A26C2A /* MotionService.swift in Sources */,
 				C288D2361F566A9B00A3DBE1 /* BeaconEntity.swift in Sources */,
 				B14883801F43538B007A9E2E /* RouteViewController.swift in Sources */,
+				9C373AC61FC69F9B00CB494D /* LocatonEntity.swift in Sources */,
 				C283C3501F62EF27009D2723 /* TestService.swift in Sources */,
 				EB19270E1F73EF3F008C92FB /* MagneticSensorSerivice.swift in Sources */,
 				C2B26B901F47005200E4B785 /* NavigationService.swift in Sources */,
