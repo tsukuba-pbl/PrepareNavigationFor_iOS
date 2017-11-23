@@ -26,7 +26,6 @@ class GetRoadStepRssiViewController: UIViewController , BeaconLoggerVCDelegate{
         let routeId = appDelegate.currentRouteId
         
         //ビーコンの計測を開始する
-        //使用するビーコンのminor idを設定する
         //使用するビーコンのMinor Idを設定
         BeaconLoggerService.getBeaconMinorIdList { response in
             //JSONで取得

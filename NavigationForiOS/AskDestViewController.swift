@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IsDestViewController: UIViewController {
+class AskDestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -44,7 +44,6 @@ class GetOrientationViewController: UIViewController {
         
         //route Idをインクリメント
         appDelegate.currentRouteId = appDelegate.currentRouteId! + 1
-        print(appDelegate.currentRouteId)
         //方向を送信する
         SlackService.postError(error: "Orientation", tag: "\(Int(magneticOrientation))°")
         let next = self.storyboard!.instantiateViewController(withIdentifier: "GetRoadStepRssiStoryboard")

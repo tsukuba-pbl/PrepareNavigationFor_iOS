@@ -11,7 +11,7 @@ import Alamofire
 
 class NavigationDataService{
     //↓のURLでお願いします
-    private let apiUrl = "http://minajun2.local/api/train/test"
+    private let apiUrl = "http://localhost/api/routes/0kzrV"
     let sessionManager = Alamofire.SessionManager.default
     
     //ナビゲーションデータを送信する
