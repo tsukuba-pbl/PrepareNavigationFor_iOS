@@ -20,20 +20,21 @@ class LocationService {
         let eventInfo = appDelegate.eventInfo!
         if let eventId = eventInfo.id {
             Alamofire.request("http://localhost/api/events/\(eventId)/locations")
-            .responseJSON { response in
-                var locations: [String] = []
-                switch response.result {
-                case .success(let response):
-                    let locationJson = JSON(response)
-                    locationJson["locations"].forEach{(_, data) in
-                        locations.append(data["name"].string!)
+                .responseJSON { response in
+                    debugPrint(response)
+                    var locations: [String] = []
+                    switch response.result {
+                    case .success(let response):
+                        let locationJson = JSON(response)
+                        locationJson["locations"].forEach{(_, data) in
+                            locations.append(data["name"].string!)
+                        }
+                        break
+                    case .failure(let error):
+                        SlackService.postError(error: error.localizedDescription, tag: "Location Service")
+                        break
                     }
-                    break
-                case .failure(let error):
-                    SlackService.postError(error: error.localizedDescription, tag: "Location Service")
-                    break
-                }
-                responseLocations(locations)
+                    responseLocations(locations)
             }
         }
     }
