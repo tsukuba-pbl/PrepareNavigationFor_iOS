@@ -19,7 +19,7 @@ class LocationService {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let eventInfo = appDelegate.eventInfo!
         if let eventId = eventInfo.id {
-            Alamofire.request("http://localhost/api/events/\(eventId)/locations")
+            Alamofire.request("\(Const().URL_API)/events/\(eventId)/locations")
                 .responseJSON { response in
                     debugPrint(response)
                     var locations: [String] = []
