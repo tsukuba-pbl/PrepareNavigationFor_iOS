@@ -93,7 +93,7 @@ class BeaconLoggerController : NSObject{
                 appDelegate.navigationDataEntity.addTrainData(routeId: appDelegate.currentRouteId!, trainData: trainData)
                 
                 //トレーニングデータを送信する
-                sendTrainData()
+                //sendTrainData()
             }
         #else
             //スレッドを終了させる
@@ -105,7 +105,7 @@ class BeaconLoggerController : NSObject{
             appDelegate.navigationDataEntity?.addTrainData(routeId: appDelegate.currentRouteId!, trainData: trainData)
             
             //トレーニングデータを送信する
-            sendTrainData()
+            //sendTrainData()
         #endif
     }
     
