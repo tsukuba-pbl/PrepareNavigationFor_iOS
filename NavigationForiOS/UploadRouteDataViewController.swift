@@ -19,10 +19,14 @@ class UploadRouteDataViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let navigationAreas = appDelegate.navigationDataEntity.getNavigationAreas()
         
+        //イベントIDを取得する
+        let eventInfo = appDelegate.eventInfo!
+        let eventId = eventInfo.id
+        
         //サーバに送信する
         let navigationDataService = NavigationDataService()
-        let params = navigationDataService.getNavigationDataAsParams(eventId: "0kzrV", sourceName: appDelegate.departure!, destinationName: appDelegate.destination!, areaArray: navigationAreas)
-        navigationDataService.sendNavigationData(params: params)
+        let params = navigationDataService.getNavigationDataAsParams(eventId: eventId!, sourceName: appDelegate.departure!, destinationName: appDelegate.destination!, areaArray: navigationAreas)
+        navigationDataService.sendNavigationData(params: params, eventId: eventId!)
     }
     
     @IBAction func onTouchButton(_ sender: Any) {
