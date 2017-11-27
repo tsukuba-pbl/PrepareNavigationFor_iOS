@@ -57,6 +57,7 @@
 		C21FA4961FC3C0A60066AEF0 /* NavigationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21FA4951FC3C0A60066AEF0 /* NavigationDataService.swift */; };
 		C26C54DA1FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */; };
 		C26C54DC1FA9F8A800C8FD94 /* AskDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C54DB1FA9F8A800C8FD94 /* AskDestViewController.swift */; };
+		C26E7B2E1FCBD393001D6E82 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E7B2D1FCBD393001D6E82 /* WebViewController.swift */; };
 		C27DDB711F57F6BF00A894C4 /* NavigationStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27DDB701F57F6BF00A894C4 /* NavigationStateController.swift */; };
 		C283C34C1F62C78F009D2723 /* BeaconLoggerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C34B1F62C78F009D2723 /* BeaconLoggerController.swift */; };
 		C283C34E1F62C8D0009D2723 /* BeaconLoggerControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C34D1F62C8D0009D2723 /* BeaconLoggerControllerTests.swift */; };
@@ -167,6 +168,7 @@
 		C21FA4951FC3C0A60066AEF0 /* NavigationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDataService.swift; sourceTree = "<group>"; };
 		C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoadStepRssiViewController.swift; sourceTree = "<group>"; };
 		C26C54DB1FA9F8A800C8FD94 /* AskDestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskDestViewController.swift; sourceTree = "<group>"; };
+		C26E7B2D1FCBD393001D6E82 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C27DDB701F57F6BF00A894C4 /* NavigationStateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStateController.swift; sourceTree = "<group>"; };
 		C283C34B1F62C78F009D2723 /* BeaconLoggerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLoggerController.swift; sourceTree = "<group>"; };
 		C283C34D1F62C8D0009D2723 /* BeaconLoggerControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLoggerControllerTests.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */,
 				C26C54DB1FA9F8A800C8FD94 /* AskDestViewController.swift */,
 				C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */,
+				C26E7B2D1FCBD393001D6E82 /* WebViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				C283C3501F62EF27009D2723 /* TestService.swift in Sources */,
 				EB19270E1F73EF3F008C92FB /* MagneticSensorSerivice.swift in Sources */,
 				C2B26B901F47005200E4B785 /* NavigationService.swift in Sources */,
+				C26E7B2E1FCBD393001D6E82 /* WebViewController.swift in Sources */,
 				C2B26B921F471E3100E4B785 /* BeaconManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
