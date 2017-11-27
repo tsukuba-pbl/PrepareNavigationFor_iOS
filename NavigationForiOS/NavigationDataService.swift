@@ -10,12 +10,11 @@ import Foundation
 import Alamofire
 
 class NavigationDataService{
-    //↓のURLでお願いします
-    private let apiUrl = "http://localhost/api/routes/0kzrV"
+    private let apiUrl = "\(Const().URL_API)/routes/"
     let sessionManager = Alamofire.SessionManager.default
     
     //ナビゲーションデータを送信する
-    public func sendNavigationData(params: Parameters){
+    public func sendNavigationData(params: Parameters, eventId: String){
         
         Alamofire.request(apiUrl, method: .post, parameters: params, encoding: JSONEncoding.default)
             .responseJSON{ response in
