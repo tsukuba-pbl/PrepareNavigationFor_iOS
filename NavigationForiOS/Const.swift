@@ -17,4 +17,11 @@ class Const : NSObject {
     let URL_API = "http://210.140.71.132/api"
     #endif
     
+    /* URL */
+    #if DEBUG
+    let URL_HOME = "http://localhost/"
+    #else
+    let URL_HOME = "http://210.140.71.132/"
+    #endif
+    
 }

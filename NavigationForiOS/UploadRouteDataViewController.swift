@@ -30,7 +30,7 @@ class UploadRouteDataViewController: UIViewController {
     }
     
     @IBAction func onTouchButton(_ sender: Any) {
-        let next = self.storyboard!.instantiateViewController(withIdentifier: "RouteStoryboard")
+        let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
         self.present(next,animated: true, completion: nil)
     }
     
