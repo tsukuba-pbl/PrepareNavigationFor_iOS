@@ -26,7 +26,15 @@ class UploadRouteDataViewController: UIViewController {
         //サーバに送信する
         let navigationDataService = NavigationDataService()
         let params = navigationDataService.getNavigationDataAsParams(eventId: eventId!, sourceName: appDelegate.departure!, destinationName: appDelegate.destination!, areaArray: navigationAreas)
-        navigationDataService.sendNavigationData(params: params, eventId: eventId!)
+        let statusCode = navigationDataService.sendNavigationData(params: params, eventId: eventId!)
+        
+        if(statusCode == 200){ //送信成功
+            
+        }else if(statusCode == 400){ //ファイルのアップロードに失敗
+            
+        }else{ //そもそも失敗
+            
+        }
     }
     
     @IBAction func onTouchButton(_ sender: Any) {

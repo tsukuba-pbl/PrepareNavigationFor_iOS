@@ -14,24 +14,24 @@ class NavigationDataService{
     let sessionManager = Alamofire.SessionManager.default
     
     //ナビゲーションデータを送信する
-    public func sendNavigationData(params: Parameters, eventId: String){
-        
+    public func sendNavigationData(params: Parameters, eventId: String) -> Int{
+        var statusCode = 0
         apiUrl += eventId;
         
         Alamofire.request(apiUrl, method: .post, parameters: params, encoding: JSONEncoding.default)
             .responseJSON{ response in
                 switch response.result {
-                case .success(let response):
-                    //送信成功時
-                    //なんかそれっぽい処理があったらいいかも
-                    print(response)
+                case .success:
+                    statusCode = (response.response?.statusCode)!
                     break
                 case .failure(let error):
                     SlackService.postError(error: error.localizedDescription, tag: "NavigationDataService")
+                    statusCode = -1
                     break
                 }
             }
-
+        
+        return statusCode
     }
     
     func getNavigationDataAsParams(eventId: String, sourceName: String, destinationName: String, areaArray: Array<AreaEntity>) -> Parameters{
