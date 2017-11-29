@@ -10,7 +10,6 @@ import UIKit
 
 class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     @IBOutlet weak var startButton: UIButton! //計測開始ボタン
-    @IBOutlet weak var routeIdLabel: UILabel!
     
     @IBOutlet weak var getOrientationButton: UIButton!
     var navigations : NavigationEntity = NavigationEntity()
@@ -23,8 +22,13 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     
     var routeId = 0
 
+    @IBOutlet weak var infoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //指示を表示する
+        infoLabel.text = "交差点もしくは目的地の中心に立ち、計測開始ボタンを押してください。\nその後、エリア内を歩き回り、十分に計測を行なったのち、次へボタンを押してください。"
         
         //AppDelegateからroute idを取得
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -37,7 +41,6 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
         //カウンタの値を0にする
         Counter.text = "0"
         
-        routeIdLabel.text = "\(routeId)"
         //くるくる設定
         loggerActivityIndicator.hidesWhenStopped = true
         
@@ -101,12 +104,6 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
         if(Counter.text != nil){
             Counter.text = "\(retval?.counter ?? 0)"
         }
-    }
-    
-    /// Route Id 指定用のステッパの値が変更したとき
-    @IBAction func didTapRouteIdStepper(_ stepper: UIStepper) {
-        routeId = Int(stepper.value)
-        routeIdLabel.text = "\(routeId)"
     }
 
     override func didReceiveMemoryWarning() {
