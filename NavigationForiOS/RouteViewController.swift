@@ -32,7 +32,9 @@ class RouteViewController: FormViewController {
         }
             
         form
-        +++ Section("Source")
+        +++ Section("作成するナビゲーションルートの出発地と目的地を選択してください")
+            
+        +++ Section("出発地")
             <<< PushRow<String>("SourceLocations"){
                 $0.title = "現在地"
                 $0.selectorTitle = "現在地の選択"
@@ -45,7 +47,7 @@ class RouteViewController: FormViewController {
             }
             
                     
-        +++ Section("Destination")
+        +++ Section("目的地")
             <<< PushRow<String>("DestinationLocations"){
                 $0.title = "目的地"
                 $0.selectorTitle = "目的地の選択"
