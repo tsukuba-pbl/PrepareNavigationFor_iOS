@@ -44,7 +44,7 @@ class EventService {
     ///
     /// - Parameter responseEvents: イベント情報
     func searchEvents(eventIdInputFormText: String, responseEvents: @escaping (EventEntity?, ResponseStatus) -> Void){
-        Alamofire.request("http://localhost/api/events/\(eventIdInputFormText)")
+        Alamofire.request("\(Const().URL_API)/events/\(eventIdInputFormText)")
             .responseJSON { response in
                 var events: EventEntity? = nil
                 var responseStatus: ResponseStatus = ResponseStatus.Success
