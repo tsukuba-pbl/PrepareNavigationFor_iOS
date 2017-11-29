@@ -11,7 +11,6 @@ import UIKit
 class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     @IBOutlet weak var startButton: UIButton! //計測開始ボタン
     
-    @IBOutlet weak var getOrientationButton: UIButton!
     var navigations : NavigationEntity = NavigationEntity()
     var beaconLogger : BeaconLoggerController?
     
@@ -28,7 +27,7 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
         super.viewDidLoad()
         
         //指示を表示する
-        infoLabel.text = "交差点もしくは目的地の中心に立ち、計測開始ボタンを押してください。\nその後、エリア内を歩き回り、十分に計測を行なったのち、次へボタンを押してください。"
+        infoLabel.text = "交差点もしくは目的地の中心に立ち、計測開始ボタンを押してください。\nその後、エリア内を歩き回り、十分に計測を行なったのち、計測終了ボタンを押してください。"
         
         //AppDelegateからroute idを取得
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -36,8 +35,6 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
         
         //最初はスタートボタンは押せる状態
         startButton.isEnabled = true
-        //方位角の計測ボタンは押せないようにする
-        getOrientationButton.isEnabled = false
         //カウンタの値を0にする
         Counter.text = "0"
         
@@ -57,47 +54,34 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     @IBAction func tapStartButton(_ sender: Any) {
         if(onStart == false){
             onStart = true
-            startButton.setTitle("Stop", for: UIControlState.normal)
+            startButton.setTitle("計測終了", for: UIControlState.normal)
             startButton.backgroundColor = UIColor.red
-            //方位角の計測ボタンを押せないようにする
-            getOrientationButton.isEnabled = false
             //くるくる開始
             loggerActivityIndicator.startAnimating()
             //計測を開始する
             beaconLogger?.startBeaconLogger(routeId: routeId)
         }else{
             beaconLogger?.stopBeaconLogger()
-            //ボタンの表示を変更
-            startButton.setTitle("Start", for: UIControlState.normal)
-            startButton.backgroundColor = UIColor.blue
-            Counter.text = "0"
-            //くるくる終了
-            loggerActivityIndicator.stopAnimating()
             //フラグ処理
             onStart = false
-            //方位角の計測ボタンを押せるようにする
-            getOrientationButton.isEnabled = true
+            //次の画面に遷移する
+            //最初の時とそれ以外の時で遷移先が変わる
+            //routeId = 1のとき最初として判断する
+            //最初 -> 方向計測
+            //2回目以降 -> 目的地かどうか？
+            //route idを取得
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let routeId = appDelegate.currentRouteId
+            
+            var next = self.storyboard!.instantiateViewController(withIdentifier: "IsDestStoryboard")
+            //route idが1のときは，方向計測に遷移
+            if(routeId == 1){
+                next = self.storyboard!.instantiateViewController(withIdentifier: "GetOrientationStoryBoard")
+            }
+            self.present(next,animated: true, completion: nil)
         }
     }
-    
-    //次の遷移
-    @IBAction func OnTouchNext(_ sender: Any) {
-        //最初の時とそれ以外の時で遷移先が変わる
-        //routeId = 1のとき最初として判断する
-        //最初 -> 方向計測
-        //2回目以降 -> 目的地かどうか？
-        //route idを取得
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let routeId = appDelegate.currentRouteId
-        
-        var next = self.storyboard!.instantiateViewController(withIdentifier: "IsDestStoryboard")
-        //route idが1のときは，方向計測に遷移
-        if(routeId == 1){
-            next = self.storyboard!.instantiateViewController(withIdentifier: "GetOrientationStoryBoard")
-        }
-        
-        self.present(next,animated: true, completion: nil)
-    }
+
     //ビューの更新
     func updateView(){
         let retval = beaconLogger?.getLoggerState()
