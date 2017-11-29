@@ -26,7 +26,6 @@ class StartRouteCreateViewController: UIViewController {
         
         //内容を全てリセットする
         appDelegate.navigationDataEntity.resetAll()
-        appDelegate.currentRouteId = 1
     }
     
     //電波強度の計測ボタンが押されたら、計測画面に遷移する
