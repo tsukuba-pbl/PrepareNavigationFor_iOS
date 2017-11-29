@@ -15,14 +15,6 @@ class UploadRouteDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //送信する
-        let statusCode = uploadNavigationData()
-        
-        //アラートの表示
-        uploadAlert(statusCode: statusCode)
-    }
-    
-    func uploadNavigationData() -> Int{
         //取得したデータをパラメータ形式で取得する
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let navigationAreas = appDelegate.navigationDataEntity.getNavigationAreas()
@@ -34,11 +26,14 @@ class UploadRouteDataViewController: UIViewController {
         //サーバに送信する
         let navigationDataService = NavigationDataService()
         let params = navigationDataService.getNavigationDataAsParams(eventId: eventId!, sourceName: appDelegate.departure!, destinationName: appDelegate.destination!, areaArray: navigationAreas)
-        let statusCode = navigationDataService.sendNavigationData(params: params, eventId: eventId!)
         
-        return statusCode
+        navigationDataService.sendNavigationData(params: params, eventId: eventId!) { response in
+            //アラートの表示
+            self.uploadAlert(statusCode: response)
+        }
+        
     }
-    
+
     //ゴール時にアラートを表示する
     func uploadAlert(statusCode: Int){
         var message = ""

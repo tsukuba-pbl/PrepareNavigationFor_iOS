@@ -14,7 +14,7 @@ class NavigationDataService{
     let sessionManager = Alamofire.SessionManager.default
     
     //ナビゲーションデータを送信する
-    public func sendNavigationData(params: Parameters, eventId: String) -> Int{
+    public func sendNavigationData(params: Parameters, eventId: String, responseStatusCode: @escaping (Int) -> Void){
         var statusCode = 0
         apiUrl += eventId;
         
@@ -29,9 +29,8 @@ class NavigationDataService{
                     statusCode = -1
                     break
                 }
+                responseStatusCode(statusCode)
             }
-        
-        return statusCode
     }
     
     func getNavigationDataAsParams(eventId: String, sourceName: String, destinationName: String, areaArray: Array<AreaEntity>) -> Parameters{
