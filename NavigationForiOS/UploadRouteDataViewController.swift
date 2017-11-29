@@ -26,14 +26,54 @@ class UploadRouteDataViewController: UIViewController {
         //サーバに送信する
         let navigationDataService = NavigationDataService()
         let params = navigationDataService.getNavigationDataAsParams(eventId: eventId!, sourceName: appDelegate.departure!, destinationName: appDelegate.destination!, areaArray: navigationAreas)
-        navigationDataService.sendNavigationData(params: params, eventId: eventId!)
+        
+        navigationDataService.sendNavigationData(params: params, eventId: eventId!) { response in
+            //アラートの表示
+            self.uploadAlert(statusCode: response)
+        }
+        
     }
-    
-    @IBAction func onTouchButton(_ sender: Any) {
-        let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
-        self.present(next,animated: true, completion: nil)
+
+    //ゴール時にアラートを表示する
+    func uploadAlert(statusCode: Int){
+        var message = ""
+        
+        if(statusCode == 200){
+            message = "アップロードに成功しました！"
+        }else if(statusCode == 400){
+            message = "アップロードに失敗しました"
+        }else{
+            message = "サーバとの通信に失敗しました"
+        }
+
+        let alertController = UIAlertController(title: "Uploader", message: message,  preferredStyle: UIAlertControllerStyle.alert)
+        
+        //成功時
+        if(statusCode == 200){
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                //成功時はルート画面へ遷移するようにする
+                let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
+                self.present(next,animated: true, completion: nil)
+            }
+            alertController.addAction(okAction)
+        }else{
+            let resendAction = UIAlertAction(title: "再送信", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                //再送信するときは，自分自身に遷移する
+                let toUpload = self.storyboard!.instantiateViewController(withIdentifier: "UploadStoryboard")
+                self.present(toUpload,animated: true, completion: nil)
+            }
+            alertController.addAction(resendAction)
+            let backAction = UIAlertAction(title: "再送信しない", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                //再送信しないときは，ルート画面へ遷移する
+                let toRoute = self.storyboard!.instantiateViewController(withIdentifier: "routes")
+                self.present(toRoute,animated: true, completion: nil)
+            }
+            alertController.addAction(backAction)
+        }
+        
+        //④ アラートの表示
+        present(alertController, animated: true, completion: nil)
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

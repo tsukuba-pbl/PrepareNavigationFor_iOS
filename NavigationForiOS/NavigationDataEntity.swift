@@ -109,6 +109,12 @@ class NavigationDataEntity{
             //現在の交差点の方向
             let currentDeg = (orientationDataList.filter({$0.routeId == routeId}).first?.orientation)!
             deg = oldDeg - currentDeg
+            //回転方向の絶対値が180度を超える場合は，右左折を反転
+            if(deg > 180){
+                deg -= 180
+            }else if(deg < -180){
+                deg += 180
+            }
         }
         return deg
     }
