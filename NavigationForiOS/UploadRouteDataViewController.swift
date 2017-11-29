@@ -37,6 +37,34 @@ class UploadRouteDataViewController: UIViewController {
         }
     }
     
+    //ゴール時にアラートを表示する
+    func uploadAlert(statusCode: Int){
+        var message = ""
+        
+        if(statusCode == 200){
+            message = "アップロードに成功しました！"
+        }else if(statusCode == 400){
+            message = "アップロードに失敗しました"
+        }else{
+            message = "サーバとの通信に失敗しました"
+        }
+
+        let alertController = UIAlertController(title: "Uploader", message: message,  preferredStyle: UIAlertControllerStyle.alert)
+        
+        //②-1 OKボタンの実装
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+            //②-2 OKがクリックされた時の処理
+            //成功時は，Route画面へ移動
+            let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
+            self.present(next,animated: true, completion: nil)
+        }
+        //③-1 ボタンに追加
+        alertController.addAction(okAction)
+        
+        //④ アラートの表示
+        present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func onTouchButton(_ sender: Any) {
         let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
         self.present(next,animated: true, completion: nil)
