@@ -15,6 +15,14 @@ class UploadRouteDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //送信する
+        let statusCode = uploadNavigationData()
+        
+        //アラートの表示
+        uploadAlert(statusCode: statusCode)
+    }
+    
+    func uploadNavigationData() -> Int{
         //取得したデータをパラメータ形式で取得する
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let navigationAreas = appDelegate.navigationDataEntity.getNavigationAreas()
@@ -28,13 +36,7 @@ class UploadRouteDataViewController: UIViewController {
         let params = navigationDataService.getNavigationDataAsParams(eventId: eventId!, sourceName: appDelegate.departure!, destinationName: appDelegate.destination!, areaArray: navigationAreas)
         let statusCode = navigationDataService.sendNavigationData(params: params, eventId: eventId!)
         
-        if(statusCode == 200){ //送信成功
-            
-        }else if(statusCode == 400){ //ファイルのアップロードに失敗
-            
-        }else{ //そもそも失敗
-            
-        }
+        return statusCode
     }
     
     //ゴール時にアラートを表示する
@@ -54,9 +56,11 @@ class UploadRouteDataViewController: UIViewController {
         //②-1 OKボタンの実装
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
             //②-2 OKがクリックされた時の処理
-            //成功時は，Route画面へ移動
-            let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
-            self.present(next,animated: true, completion: nil)
+            if(statusCode == 200){
+                //成功時はルート画面へ遷移するようにする
+                let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
+                self.present(next,animated: true, completion: nil)
+            }
         }
         //③-1 ボタンに追加
         alertController.addAction(okAction)
