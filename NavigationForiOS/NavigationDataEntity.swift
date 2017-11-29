@@ -25,6 +25,12 @@ class NavigationDataEntity{
     var trainDataList : Array<TRAIN_DATA> = []
     var orientationDataList : Array<ORIENTATION_DATA> = []
     
+    //配列内の内容を全て削除する
+    public func resetAll(){
+        trainDataList.removeAll()
+        orientationDataList.removeAll()
+    }
+    
     /// トレーニングデータを追加する
     ///
     /// - Parameters:
