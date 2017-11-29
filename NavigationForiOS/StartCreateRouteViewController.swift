@@ -23,6 +23,9 @@ class StartRouteCreateViewController: UIViewController {
         appDelegate.currentRouteId = 1
         //Route設定画面で指定された開始地点の名前を表示する
         startNavigationLabel.text = source + "に立ってください"
+        
+        //内容を全てリセットする
+        appDelegate.navigationDataEntity.resetAll()
     }
     
     //電波強度の計測ボタンが押されたら、計測画面に遷移する
