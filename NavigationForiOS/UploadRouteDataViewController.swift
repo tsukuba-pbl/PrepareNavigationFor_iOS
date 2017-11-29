@@ -48,27 +48,32 @@ class UploadRouteDataViewController: UIViewController {
 
         let alertController = UIAlertController(title: "Uploader", message: message,  preferredStyle: UIAlertControllerStyle.alert)
         
-        //②-1 OKボタンの実装
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
-            //②-2 OKがクリックされた時の処理
-            if(statusCode == 200){
+        //成功時
+        if(statusCode == 200){
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
                 //成功時はルート画面へ遷移するようにする
                 let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
                 self.present(next,animated: true, completion: nil)
             }
+            alertController.addAction(okAction)
+        }else{
+            let resendAction = UIAlertAction(title: "再送信", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                //再送信するときは，自分自身に遷移する
+                let toUpload = self.storyboard!.instantiateViewController(withIdentifier: "UploadStoryboard")
+                self.present(toUpload,animated: true, completion: nil)
+            }
+            alertController.addAction(resendAction)
+            let backAction = UIAlertAction(title: "再送信しない", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                //再送信しないときは，ルート画面へ遷移する
+                let toRoute = self.storyboard!.instantiateViewController(withIdentifier: "routes")
+                self.present(toRoute,animated: true, completion: nil)
+            }
+            alertController.addAction(backAction)
         }
-        //③-1 ボタンに追加
-        alertController.addAction(okAction)
         
         //④ アラートの表示
         present(alertController, animated: true, completion: nil)
     }
-    
-    @IBAction func onTouchButton(_ sender: Any) {
-        let next = self.storyboard!.instantiateViewController(withIdentifier: "routes")
-        self.present(next,animated: true, completion: nil)
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
