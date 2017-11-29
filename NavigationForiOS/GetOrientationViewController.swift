@@ -18,9 +18,13 @@ class GetOrientationViewController: UIViewController {
     
     @IBOutlet weak var arrowImageView: UIImageView!
     @IBOutlet weak var magneticOrientationLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //指示を表示する
+        infoLabel.text = "スマートフォンを8の字に降った後，次に進む方向を向き、計測ボタンを押してください"
         
         //矢印の画像を読み込み
         arrowImage = UIImage(named: "arrow.png")

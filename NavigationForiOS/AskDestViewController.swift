@@ -11,8 +11,13 @@ import UIKit
 
 class AskDestViewController: UIViewController {
     
+    @IBOutlet weak var infoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let destinationName = appDelegate.destination
+        infoLabel.text = "ここは、「" + destinationName! + "」ですか？"
         
     }
     

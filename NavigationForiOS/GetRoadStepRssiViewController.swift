@@ -17,10 +17,14 @@ class GetRoadStepRssiViewController: UIViewController , BeaconLoggerVCDelegate{
     var beaconLogger : BeaconLoggerController?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    @IBOutlet weak var StepsLabel: UILabel!
+    //@IBOutlet weak var StepsLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //指示を表示
+        infoLabel.text = "次の交差点・目的地の手前まで進み、到着したら「到着」ボタンを押してください」"
         
         //RouteViewControllerで設定した目的地をAppDelegateから取得
         let routeId = appDelegate.currentRouteId
@@ -43,8 +47,8 @@ class GetRoadStepRssiViewController: UIViewController , BeaconLoggerVCDelegate{
     }
     
     func updateView(){
-        Steps = pedometerService.get_steps()
-        StepsLabel.text = "\(Steps)歩"
+//        Steps = pedometerService.get_steps()
+//        StepsLabel.text = "\(Steps)歩"
     }
     
     @IBAction func onTouchNextButton(_ sender: Any) {
