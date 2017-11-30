@@ -107,7 +107,7 @@ class NavigationDataEntity{
             //一つ前の交差点の方向
             let preDeg = (orientationDataList.filter({$0.routeId == routeId - 2}).first?.orientation)!
             //一つ前の交差点で向いた方向と逆の方向が，反転時に向くべき方向となる
-            deg = (preDeg + 180) % 360
+            deg = (preDeg - 180)
         }else{
             //一つ前の交差点の方向
             let oldDeg = (orientationDataList.filter({$0.routeId == routeId - 2}).first?.orientation)!
