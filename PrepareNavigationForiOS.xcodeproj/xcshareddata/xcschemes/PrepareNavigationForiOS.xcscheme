@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
-   version = "1.3">
+   LastUpgradeVersion = "0900"
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,37 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B148833E1F3C4D32007A9E2E"
-               BuildableName = "NavigationForiOS.app"
-               BlueprintName = "NavigationForiOS"
-               ReferencedContainer = "container:NavigationForiOS.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B14883541F3C4D32007A9E2E"
-               BuildableName = "NavigationForiOSTests.xctest"
-               BlueprintName = "NavigationForiOSTests"
-               ReferencedContainer = "container:NavigationForiOS.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B148835F1F3C4D32007A9E2E"
-               BuildableName = "NavigationForiOSUITests.xctest"
-               BlueprintName = "NavigationForiOSUITests"
-               ReferencedContainer = "container:NavigationForiOS.xcodeproj">
+               BuildableName = "PrepareNavigationForiOS.app"
+               BlueprintName = "PrepareNavigationForiOS"
+               ReferencedContainer = "container:PrepareNavigationForiOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -54,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
@@ -62,19 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B14883541F3C4D32007A9E2E"
-               BuildableName = "NavigationForiOSTests.xctest"
-               BlueprintName = "NavigationForiOSTests"
-               ReferencedContainer = "container:NavigationForiOS.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B148835F1F3C4D32007A9E2E"
-               BuildableName = "NavigationForiOSUITests.xctest"
-               BlueprintName = "NavigationForiOSUITests"
-               ReferencedContainer = "container:NavigationForiOS.xcodeproj">
+               BuildableName = "PrepareNavigationForiOSTests.xctest"
+               BlueprintName = "PrepareNavigationForiOSTests"
+               ReferencedContainer = "container:PrepareNavigationForiOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -82,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B148833E1F3C4D32007A9E2E"
-            BuildableName = "NavigationForiOS.app"
-            BlueprintName = "NavigationForiOS"
-            ReferencedContainer = "container:NavigationForiOS.xcodeproj">
+            BuildableName = "PrepareNavigationForiOS.app"
+            BlueprintName = "PrepareNavigationForiOS"
+            ReferencedContainer = "container:PrepareNavigationForiOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,6 +57,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -105,16 +69,20 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B148833E1F3C4D32007A9E2E"
-            BuildableName = "NavigationForiOS.app"
-            BlueprintName = "NavigationForiOS"
-            ReferencedContainer = "container:NavigationForiOS.xcodeproj">
+            BuildableName = "PrepareNavigationForiOS.app"
+            BlueprintName = "PrepareNavigationForiOS"
+            ReferencedContainer = "container:PrepareNavigationForiOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
+      <LocationScenarioReference
+         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
+         referenceType = "1">
+      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -124,9 +92,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B148833E1F3C4D32007A9E2E"
-            BuildableName = "NavigationForiOS.app"
-            BlueprintName = "NavigationForiOS"
-            ReferencedContainer = "container:NavigationForiOS.xcodeproj">
+            BuildableName = "PrepareNavigationForiOS.app"
+            BlueprintName = "PrepareNavigationForiOS"
+            ReferencedContainer = "container:PrepareNavigationForiOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -134,7 +102,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

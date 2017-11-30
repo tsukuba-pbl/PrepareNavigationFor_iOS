@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C373AC61FC69F9B00CB494D /* LocatonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C373AC51FC69F9B00CB494D /* LocatonEntity.swift */; };
+		9C373AC81FC6ADAC00CB494D /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C373AC71FC6ADAC00CB494D /* Const.swift */; };
 		B14883431F3C4D32007A9E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14883421F3C4D32007A9E2E /* AppDelegate.swift */; };
 		B14883451F3C4D32007A9E2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14883441F3C4D32007A9E2E /* HomeViewController.swift */; };
 		B148834A1F3C4D32007A9E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14883481F3C4D32007A9E2E /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 		B160F4A21F528A5100169231 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B160F4991F5286AF00169231 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B160F4A41F528A6B00169231 /* SwinjectStoryboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B160F49A1F5286AF00169231 /* SwinjectStoryboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B160F4A81F53496700169231 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160F4A71F53496700169231 /* HomeViewControllerTests.swift */; };
+		C202BDBC1F9F2A4C0063F6F6 /* StartCreateRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C202BDBB1F9F2A4C0063F6F6 /* StartCreateRouteViewController.swift */; };
+		C202BDBE1FA04EC60063F6F6 /* GetOrientationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C202BDBD1FA04EC60063F6F6 /* GetOrientationViewController.swift */; };
 		C20352B41F6A401100891AF9 /* BeaconLoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20352B31F6A401100891AF9 /* BeaconLoggerService.swift */; };
 		C2052B271F4D6557001098DE /* NavigationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2052B261F4D6557001098DE /* NavigationEntity.swift */; };
 		C2052B2B1F4DCC55001098DE /* NavigationEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2052B2A1F4DCC55001098DE /* NavigationEntityTests.swift */; };
@@ -49,12 +53,18 @@
 		C20B11931F74B76D004915B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20B11921F74B76D004915B4 /* AVFoundation.framework */; };
 		C21301841F66780B00D966A9 /* KNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21301831F66780B00D966A9 /* KNN.swift */; };
 		C21301861F67815700D966A9 /* kNNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21301851F67815700D966A9 /* kNNTests.swift */; };
+		C21FA4941FC2E6250066AEF0 /* AreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21FA4931FC2E6250066AEF0 /* AreaEntity.swift */; };
+		C21FA4961FC3C0A60066AEF0 /* NavigationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21FA4951FC3C0A60066AEF0 /* NavigationDataService.swift */; };
+		C26C54DA1FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */; };
+		C26C54DC1FA9F8A800C8FD94 /* AskDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C54DB1FA9F8A800C8FD94 /* AskDestViewController.swift */; };
+		C26E7B2E1FCBD393001D6E82 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E7B2D1FCBD393001D6E82 /* WebViewController.swift */; };
 		C27DDB711F57F6BF00A894C4 /* NavigationStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27DDB701F57F6BF00A894C4 /* NavigationStateController.swift */; };
 		C283C34C1F62C78F009D2723 /* BeaconLoggerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C34B1F62C78F009D2723 /* BeaconLoggerController.swift */; };
 		C283C34E1F62C8D0009D2723 /* BeaconLoggerControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C34D1F62C8D0009D2723 /* BeaconLoggerControllerTests.swift */; };
 		C283C3501F62EF27009D2723 /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C34F1F62EF27009D2723 /* TestService.swift */; };
 		C288D2361F566A9B00A3DBE1 /* BeaconEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288D2351F566A9B00A3DBE1 /* BeaconEntity.swift */; };
 		C288D2381F5677CB00A3DBE1 /* BeaconEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288D2371F5677CB00A3DBE1 /* BeaconEntityTests.swift */; };
+		C293A6001FAAB0C20099A807 /* UploadRouteDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */; };
 		C2962D571F5FC090004629CD /* LpfEuclidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2962D561F5FC090004629CD /* LpfEuclidTests.swift */; };
 		C2962D5F1F603496004629CD /* BeaconLoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2962D5E1F603496004629CD /* BeaconLoggerViewController.swift */; };
 		C2B26B8B1F43EC7E00E4B785 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B26B891F43EC7800E4B785 /* CoreLocation.framework */; };
@@ -63,6 +73,7 @@
 		C2B26B921F471E3100E4B785 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B26B911F471E3100E4B785 /* BeaconManager.swift */; };
 		C2B26B941F490D3200E4B785 /* BeaconManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B26B931F490D3200E4B785 /* BeaconManagerTests.swift */; };
 		C2C22FD11F722133007FCD27 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C22FD01F722133007FCD27 /* SpeechService.swift */; };
+		C2EA5D0B1FC2A489009571D6 /* NavigationDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EA5D0A1FC2A489009571D6 /* NavigationDataEntity.swift */; };
 		EB19270E1F73EF3F008C92FB /* MagneticSensorSerivice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB19270D1F73EF3F008C92FB /* MagneticSensorSerivice.swift */; };
 		EB1927101F74C82F008C92FB /* MagneticSensorServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB19270F1F74C82F008C92FB /* MagneticSensorServiceTests.swift */; };
 		EB432FDC1F4D603A00FAC0EB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB432FDB1F4D603A00FAC0EB /* CoreMotion.framework */; };
@@ -108,17 +119,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B148833F1F3C4D32007A9E2E /* NavigationForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C373AC51FC69F9B00CB494D /* LocatonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatonEntity.swift; sourceTree = "<group>"; };
+		9C373AC71FC6ADAC00CB494D /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		B148833F1F3C4D32007A9E2E /* PrepareNavigationForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrepareNavigationForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14883421F3C4D32007A9E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14883441F3C4D32007A9E2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B14883491F3C4D32007A9E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B148834B1F3C4D32007A9E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B148834E1F3C4D32007A9E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B14883501F3C4D32007A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B14883551F3C4D32007A9E2E /* NavigationForiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationForiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14883551F3C4D32007A9E2E /* PrepareNavigationForiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrepareNavigationForiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14883591F3C4D32007A9E2E /* NavigationForiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationForiOSTests.swift; sourceTree = "<group>"; };
 		B148835B1F3C4D32007A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B14883601F3C4D32007A9E2E /* NavigationForiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationForiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14883601F3C4D32007A9E2E /* PrepareNavigationForiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrepareNavigationForiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14883641F3C4D32007A9E2E /* NavigationForiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationForiOSUITests.swift; sourceTree = "<group>"; };
 		B14883661F3C4D32007A9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B148837F1F43538B007A9E2E /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +154,8 @@
 		B160F49A1F5286AF00169231 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		B160F49D1F5286BA00169231 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		B160F4A71F53496700169231 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		C202BDBB1F9F2A4C0063F6F6 /* StartCreateRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCreateRouteViewController.swift; sourceTree = "<group>"; };
+		C202BDBD1FA04EC60063F6F6 /* GetOrientationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrientationViewController.swift; sourceTree = "<group>"; };
 		C20352B31F6A401100891AF9 /* BeaconLoggerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLoggerService.swift; sourceTree = "<group>"; };
 		C2052B261F4D6557001098DE /* NavigationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationEntity.swift; sourceTree = "<group>"; };
 		C2052B2A1F4DCC55001098DE /* NavigationEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationEntityTests.swift; sourceTree = "<group>"; };
@@ -149,12 +164,18 @@
 		C20B11921F74B76D004915B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C21301831F66780B00D966A9 /* KNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNN.swift; sourceTree = "<group>"; };
 		C21301851F67815700D966A9 /* kNNTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kNNTests.swift; sourceTree = "<group>"; };
+		C21FA4931FC2E6250066AEF0 /* AreaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaEntity.swift; sourceTree = "<group>"; };
+		C21FA4951FC3C0A60066AEF0 /* NavigationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDataService.swift; sourceTree = "<group>"; };
+		C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoadStepRssiViewController.swift; sourceTree = "<group>"; };
+		C26C54DB1FA9F8A800C8FD94 /* AskDestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskDestViewController.swift; sourceTree = "<group>"; };
+		C26E7B2D1FCBD393001D6E82 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C27DDB701F57F6BF00A894C4 /* NavigationStateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStateController.swift; sourceTree = "<group>"; };
 		C283C34B1F62C78F009D2723 /* BeaconLoggerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLoggerController.swift; sourceTree = "<group>"; };
 		C283C34D1F62C8D0009D2723 /* BeaconLoggerControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLoggerControllerTests.swift; sourceTree = "<group>"; };
 		C283C34F1F62EF27009D2723 /* TestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
 		C288D2351F566A9B00A3DBE1 /* BeaconEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconEntity.swift; sourceTree = "<group>"; };
 		C288D2371F5677CB00A3DBE1 /* BeaconEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconEntityTests.swift; sourceTree = "<group>"; };
+		C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRouteDataViewController.swift; sourceTree = "<group>"; };
 		C2962D561F5FC090004629CD /* LpfEuclidTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LpfEuclidTests.swift; sourceTree = "<group>"; };
 		C2962D5E1F603496004629CD /* BeaconLoggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLoggerViewController.swift; sourceTree = "<group>"; };
 		C2B26B891F43EC7800E4B785 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -163,6 +184,7 @@
 		C2B26B911F471E3100E4B785 /* BeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		C2B26B931F490D3200E4B785 /* BeaconManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManagerTests.swift; sourceTree = "<group>"; };
 		C2C22FD01F722133007FCD27 /* SpeechService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		C2EA5D0A1FC2A489009571D6 /* NavigationDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDataEntity.swift; sourceTree = "<group>"; };
 		EB19270D1F73EF3F008C92FB /* MagneticSensorSerivice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagneticSensorSerivice.swift; sourceTree = "<group>"; };
 		EB19270F1F74C82F008C92FB /* MagneticSensorServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagneticSensorServiceTests.swift; sourceTree = "<group>"; };
 		EB432FDB1F4D603A00FAC0EB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -221,9 +243,9 @@
 		B14883401F3C4D32007A9E2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B148833F1F3C4D32007A9E2E /* NavigationForiOS.app */,
-				B14883551F3C4D32007A9E2E /* NavigationForiOSTests.xctest */,
-				B14883601F3C4D32007A9E2E /* NavigationForiOSUITests.xctest */,
+				B148833F1F3C4D32007A9E2E /* PrepareNavigationForiOS.app */,
+				B14883551F3C4D32007A9E2E /* PrepareNavigationForiOSTests.xctest */,
+				B14883601F3C4D32007A9E2E /* PrepareNavigationForiOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +263,7 @@
 				B148834D1F3C4D32007A9E2E /* LaunchScreen.storyboard */,
 				B14883501F3C4D32007A9E2E /* Info.plist */,
 				B160F49D1F5286BA00169231 /* SwinjectStoryboard.swift */,
+				9C373AC71FC6ADAC00CB494D /* Const.swift */,
 			);
 			path = NavigationForiOS;
 			sourceTree = "<group>";
@@ -291,6 +314,12 @@
 				C2962D5E1F603496004629CD /* BeaconLoggerViewController.swift */,
 				C283C34B1F62C78F009D2723 /* BeaconLoggerController.swift */,
 				B1582FB21F963287006686CD /* EventInfoViewController.swift */,
+				C202BDBB1F9F2A4C0063F6F6 /* StartCreateRouteViewController.swift */,
+				C202BDBD1FA04EC60063F6F6 /* GetOrientationViewController.swift */,
+				C26C54D91FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift */,
+				C26C54DB1FA9F8A800C8FD94 /* AskDestViewController.swift */,
+				C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */,
+				C26E7B2D1FCBD393001D6E82 /* WebViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -312,6 +341,9 @@
 				C2052B261F4D6557001098DE /* NavigationEntity.swift */,
 				C288D2351F566A9B00A3DBE1 /* BeaconEntity.swift */,
 				B1582FB41F963D87006686CD /* EventEntity.swift */,
+				C2EA5D0A1FC2A489009571D6 /* NavigationDataEntity.swift */,
+				C21FA4931FC2E6250066AEF0 /* AreaEntity.swift */,
+				9C373AC51FC69F9B00CB494D /* LocatonEntity.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -329,12 +361,13 @@
 				B15B71561F5E699200B56551 /* AlgorithmBaseProtocol.swift */,
 				B15B71581F5E69C600B56551 /* Lpf.swift */,
 				B15B715A1F5E6A3900B56551 /* LpfEucild.swift */,
-				B1533ED91F5FE14200776036 /* AlgorithmBase.swift */,
 				C283C34F1F62EF27009D2723 /* TestService.swift */,
+				B1533ED91F5FE14200776036 /* AlgorithmBase.swift */,
 				C20352B31F6A401100891AF9 /* BeaconLoggerService.swift */,
 				C21301831F66780B00D966A9 /* KNN.swift */,
 				C2C22FD01F722133007FCD27 /* SpeechService.swift */,
 				EB19270D1F73EF3F008C92FB /* MagneticSensorSerivice.swift */,
+				C21FA4951FC3C0A60066AEF0 /* NavigationDataService.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -366,9 +399,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B148833E1F3C4D32007A9E2E /* NavigationForiOS */ = {
+		B148833E1F3C4D32007A9E2E /* PrepareNavigationForiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B14883691F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOS" */;
+			buildConfigurationList = B14883691F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOS" */;
 			buildPhases = (
 				B148833B1F3C4D32007A9E2E /* Sources */,
 				B148833C1F3C4D32007A9E2E /* Frameworks */,
@@ -379,14 +412,14 @@
 			);
 			dependencies = (
 			);
-			name = NavigationForiOS;
+			name = PrepareNavigationForiOS;
 			productName = NavigationForiOS;
-			productReference = B148833F1F3C4D32007A9E2E /* NavigationForiOS.app */;
+			productReference = B148833F1F3C4D32007A9E2E /* PrepareNavigationForiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B14883541F3C4D32007A9E2E /* NavigationForiOSTests */ = {
+		B14883541F3C4D32007A9E2E /* PrepareNavigationForiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B148836C1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOSTests" */;
+			buildConfigurationList = B148836C1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOSTests" */;
 			buildPhases = (
 				B14883511F3C4D32007A9E2E /* Sources */,
 				B14883521F3C4D32007A9E2E /* Frameworks */,
@@ -397,14 +430,14 @@
 			dependencies = (
 				B14883571F3C4D32007A9E2E /* PBXTargetDependency */,
 			);
-			name = NavigationForiOSTests;
+			name = PrepareNavigationForiOSTests;
 			productName = NavigationForiOSTests;
-			productReference = B14883551F3C4D32007A9E2E /* NavigationForiOSTests.xctest */;
+			productReference = B14883551F3C4D32007A9E2E /* PrepareNavigationForiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B148835F1F3C4D32007A9E2E /* NavigationForiOSUITests */ = {
+		B148835F1F3C4D32007A9E2E /* PrepareNavigationForiOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B148836F1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOSUITests" */;
+			buildConfigurationList = B148836F1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOSUITests" */;
 			buildPhases = (
 				B148835C1F3C4D32007A9E2E /* Sources */,
 				B148835D1F3C4D32007A9E2E /* Frameworks */,
@@ -415,9 +448,9 @@
 			dependencies = (
 				B14883621F3C4D32007A9E2E /* PBXTargetDependency */,
 			);
-			name = NavigationForiOSUITests;
+			name = PrepareNavigationForiOSUITests;
 			productName = NavigationForiOSUITests;
-			productReference = B14883601F3C4D32007A9E2E /* NavigationForiOSUITests.xctest */;
+			productReference = B14883601F3C4D32007A9E2E /* PrepareNavigationForiOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -454,7 +487,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B148833A1F3C4D32007A9E2E /* Build configuration list for PBXProject "NavigationForiOS" */;
+			buildConfigurationList = B148833A1F3C4D32007A9E2E /* Build configuration list for PBXProject "PrepareNavigationForiOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -467,9 +500,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B148833E1F3C4D32007A9E2E /* NavigationForiOS */,
-				B14883541F3C4D32007A9E2E /* NavigationForiOSTests */,
-				B148835F1F3C4D32007A9E2E /* NavigationForiOSUITests */,
+				B148833E1F3C4D32007A9E2E /* PrepareNavigationForiOS */,
+				B14883541F3C4D32007A9E2E /* PrepareNavigationForiOSTests */,
+				B148835F1F3C4D32007A9E2E /* PrepareNavigationForiOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -507,33 +540,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26C54DC1FA9F8A800C8FD94 /* AskDestViewController.swift in Sources */,
 				B1533EDA1F5FE14200776036 /* AlgorithmBase.swift in Sources */,
 				B15B71571F5E699200B56551 /* AlgorithmBaseProtocol.swift in Sources */,
 				C2052B271F4D6557001098DE /* NavigationEntity.swift in Sources */,
+				C26C54DA1FA9F17B00C8FD94 /* GetRoadStepRssiViewController.swift in Sources */,
 				C283C34C1F62C78F009D2723 /* BeaconLoggerController.swift in Sources */,
 				C20352B41F6A401100891AF9 /* BeaconLoggerService.swift in Sources */,
 				B15B715B1F5E6A3900B56551 /* LpfEucild.swift in Sources */,
 				B160F49E1F5286BA00169231 /* SwinjectStoryboard.swift in Sources */,
+				C21FA4941FC2E6250066AEF0 /* AreaEntity.swift in Sources */,
+				C202BDBC1F9F2A4C0063F6F6 /* StartCreateRouteViewController.swift in Sources */,
 				B148839F1F4592B5007A9E2E /* EventService.swift in Sources */,
 				EB80B5FE1F4EA91A00349958 /* PedometerService.swift in Sources */,
+				C21FA4961FC3C0A60066AEF0 /* NavigationDataService.swift in Sources */,
 				B1582FB31F963287006686CD /* EventInfoViewController.swift in Sources */,
 				C21301841F66780B00D966A9 /* KNN.swift in Sources */,
 				B14883851F435BF1007A9E2E /* NavigationViewController.swift in Sources */,
+				9C373AC81FC6ADAC00CB494D /* Const.swift in Sources */,
 				C27DDB711F57F6BF00A894C4 /* NavigationStateController.swift in Sources */,
+				C2EA5D0B1FC2A489009571D6 /* NavigationDataEntity.swift in Sources */,
 				B14883431F3C4D32007A9E2E /* AppDelegate.swift in Sources */,
 				C2C22FD11F722133007FCD27 /* SpeechService.swift in Sources */,
+				C202BDBE1FA04EC60063F6F6 /* GetOrientationViewController.swift in Sources */,
 				B1582FB51F963D87006686CD /* EventEntity.swift in Sources */,
 				B14883931F4560FD007A9E2E /* LocationService.swift in Sources */,
 				B14883A11F4B023E007A9E2E /* SlackService.swift in Sources */,
+				C293A6001FAAB0C20099A807 /* UploadRouteDataViewController.swift in Sources */,
 				C2962D5F1F603496004629CD /* BeaconLoggerViewController.swift in Sources */,
 				B15B71591F5E69C600B56551 /* Lpf.swift in Sources */,
 				B14883451F3C4D32007A9E2E /* HomeViewController.swift in Sources */,
 				EBF3FC0B1F57F30E00A26C2A /* MotionService.swift in Sources */,
 				C288D2361F566A9B00A3DBE1 /* BeaconEntity.swift in Sources */,
 				B14883801F43538B007A9E2E /* RouteViewController.swift in Sources */,
+				9C373AC61FC69F9B00CB494D /* LocatonEntity.swift in Sources */,
 				C283C3501F62EF27009D2723 /* TestService.swift in Sources */,
 				EB19270E1F73EF3F008C92FB /* MagneticSensorSerivice.swift in Sources */,
 				C2B26B901F47005200E4B785 /* NavigationService.swift in Sources */,
+				C26E7B2E1FCBD393001D6E82 /* WebViewController.swift in Sources */,
 				C2B26B921F471E3100E4B785 /* BeaconManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,12 +617,12 @@
 /* Begin PBXTargetDependency section */
 		B14883571F3C4D32007A9E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B148833E1F3C4D32007A9E2E /* NavigationForiOS */;
+			target = B148833E1F3C4D32007A9E2E /* PrepareNavigationForiOS */;
 			targetProxy = B14883561F3C4D32007A9E2E /* PBXContainerItemProxy */;
 		};
 		B14883621F3C4D32007A9E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B148833E1F3C4D32007A9E2E /* NavigationForiOS */;
+			target = B148833E1F3C4D32007A9E2E /* PrepareNavigationForiOS */;
 			targetProxy = B14883611F3C4D32007A9E2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -710,7 +754,7 @@
 				INFOPLIST_FILE = NavigationForiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.NavigationForiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.PrepareNavigationForiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -728,7 +772,7 @@
 				INFOPLIST_FILE = NavigationForiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.NavigationForiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.PrepareNavigationForiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -746,10 +790,11 @@
 				);
 				INFOPLIST_FILE = NavigationForiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.NavigationForiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavigationForiOS.app/NavigationForiOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrepareNavigationForiOS.app/PrepareNavigationForiOS";
 			};
 			name = Debug;
 		};
@@ -768,7 +813,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = umeSystems.NavigationForiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavigationForiOS.app/NavigationForiOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrepareNavigationForiOS.app/PrepareNavigationForiOS";
 			};
 			name = Release;
 		};
@@ -803,7 +848,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B148833A1F3C4D32007A9E2E /* Build configuration list for PBXProject "NavigationForiOS" */ = {
+		B148833A1F3C4D32007A9E2E /* Build configuration list for PBXProject "PrepareNavigationForiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B14883671F3C4D32007A9E2E /* Debug */,
@@ -812,7 +857,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B14883691F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOS" */ = {
+		B14883691F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B148836A1F3C4D32007A9E2E /* Debug */,
@@ -821,7 +866,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B148836C1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOSTests" */ = {
+		B148836C1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B148836D1F3C4D32007A9E2E /* Debug */,
@@ -830,7 +875,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B148836F1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "NavigationForiOSUITests" */ = {
+		B148836F1F3C4D32007A9E2E /* Build configuration list for PBXNativeTarget "PrepareNavigationForiOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B14883701F3C4D32007A9E2E /* Debug */,

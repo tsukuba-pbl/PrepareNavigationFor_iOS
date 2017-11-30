@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import NavigationForiOS
+@testable import PrepareNavigationForiOS
 
 class NavigationEntityTests: XCTestCase {
     let navigations = NavigationEntity()

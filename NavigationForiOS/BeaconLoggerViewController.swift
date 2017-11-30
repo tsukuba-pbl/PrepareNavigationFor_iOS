@@ -10,8 +10,6 @@ import UIKit
 
 class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     @IBOutlet weak var startButton: UIButton! //計測開始ボタン
-    @IBOutlet weak var routeIdLabel: UILabel!
-    @IBOutlet weak var setRouteIdStepper: UIStepper!
     
     var navigations : NavigationEntity = NavigationEntity()
     var beaconLogger : BeaconLoggerController?
@@ -21,16 +19,25 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     var timer : Timer!
     var onStart = false //計測中かどうか
     
-    var routeId = 1
+    var routeId = 0
 
+    @IBOutlet weak var infoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //指示を表示する
+        infoLabel.text = "交差点もしくは目的地の中心に立ち、計測開始ボタンを押してください。\nその後、エリア内を歩き回り、十分に計測を行なったのち、計測終了ボタンを押してください。"
+        
+        //AppDelegateからroute idを取得
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        routeId = appDelegate.currentRouteId!
+        
         //最初はスタートボタンは押せる状態
         startButton.isEnabled = true
+        //カウンタの値を0にする
         Counter.text = "0"
         
-        routeIdLabel.text = "\(routeId)"
         //くるくる設定
         loggerActivityIndicator.hidesWhenStopped = true
         
@@ -47,44 +54,40 @@ class BeaconLoggerViewController: UIViewController, BeaconLoggerVCDelegate {
     @IBAction func tapStartButton(_ sender: Any) {
         if(onStart == false){
             onStart = true
-            startButton.setTitle("Stop", for: UIControlState.normal)
+            startButton.setTitle("計測終了", for: UIControlState.normal)
             startButton.backgroundColor = UIColor.red
-            //Stepperを押せないようにする
-            setRouteIdStepper.isEnabled = false
             //くるくる開始
             loggerActivityIndicator.startAnimating()
             //計測を開始する
             beaconLogger?.startBeaconLogger(routeId: routeId)
         }else{
             beaconLogger?.stopBeaconLogger()
-            //ボタンの表示を変更
-            startButton.setTitle("Start", for: UIControlState.normal)
-            startButton.backgroundColor = UIColor.blue
-            Counter.text = "0"
-            //くるくる終了
-            loggerActivityIndicator.stopAnimating()
-            //Stepperの表示を変更
-            setRouteIdStepper.value += 1.0
-            routeId += 1
-            routeIdLabel.text = "\(routeId)"
-            setRouteIdStepper.isEnabled = true
             //フラグ処理
             onStart = false
+            //次の画面に遷移する
+            //最初の時とそれ以外の時で遷移先が変わる
+            //routeId = 1のとき最初として判断する
+            //最初 -> 方向計測
+            //2回目以降 -> 目的地かどうか？
+            //route idを取得
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let routeId = appDelegate.currentRouteId
+            
+            var next = self.storyboard!.instantiateViewController(withIdentifier: "IsDestStoryboard")
+            //route idが1のときは，方向計測に遷移
+            if(routeId == 1){
+                next = self.storyboard!.instantiateViewController(withIdentifier: "GetOrientationStoryBoard")
+            }
+            self.present(next,animated: true, completion: nil)
         }
     }
-    
+
     //ビューの更新
     func updateView(){
         let retval = beaconLogger?.getLoggerState()
         if(Counter.text != nil){
             Counter.text = "\(retval?.counter ?? 0)"
         }
-    }
-    
-    /// Route Id 指定用のステッパの値が変更したとき
-    @IBAction func didTapRouteIdStepper(_ stepper: UIStepper) {
-        routeId = Int(stepper.value)
-        routeIdLabel.text = "\(routeId)"
     }
 
     override func didReceiveMemoryWarning() {

@@ -32,10 +32,12 @@ class RouteViewController: FormViewController {
         }
             
         form
-        +++ Section("Source")
+        +++ Section("作成するナビゲーションルートの出発地と目的地を選択してください")
+            
+        +++ Section("出発地")
             <<< PushRow<String>("SourceLocations"){
-                $0.title = "現在地"
-                $0.selectorTitle = "現在地の選択"
+                $0.title = "出発地"
+                $0.selectorTitle = "出発地の選択"
                 $0.options = self.point
                 $0.onChange{[unowned self] row in
                     self.source = row.value ?? self.point[0]
@@ -45,7 +47,7 @@ class RouteViewController: FormViewController {
             }
             
                     
-        +++ Section("Destination")
+        +++ Section("目的地")
             <<< PushRow<String>("DestinationLocations"){
                 $0.title = "目的地"
                 $0.selectorTitle = "目的地の選択"
@@ -60,13 +62,14 @@ class RouteViewController: FormViewController {
             // Button
         +++ Section()
             <<< ButtonRow(){
-                $0.title = "Start Navigation"
+                $0.title = "ナビゲーションデータの作成を開始"
                 $0.onCellSelection{ [unowned self] cell, row in
                     if self.isSuccessLocationInput(source: self.source, destination: self.destination) {
-                        //次のビュー(NavigationViewController)用に目的地の値を保持する
+                        //次のビュー(NavigationViewController)用にスタート地点と目的地の値を保持する
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.departure = self.source
                         appDelegate.destination = self.destination
-                        let next = self.storyboard!.instantiateViewController(withIdentifier: "NavigationStoryboard")
+                        let next = self.storyboard!.instantiateViewController(withIdentifier: "StartRouteCreateStoryboard")
                         self.present(next,animated: true, completion: nil)
                     }
                 }

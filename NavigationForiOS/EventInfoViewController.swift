@@ -19,6 +19,8 @@ class EventInfoViewController: UIViewController {
     
     @IBOutlet weak var eventLocation: UILabel!
     
+    @IBOutlet weak var eventEndDate: UILabel!
+    
     var event: EventEntity? = nil
     
     override func viewDidLoad() {
@@ -29,7 +31,8 @@ class EventInfoViewController: UIViewController {
 
         self.eventName.text = self.event?.name
         self.eventInfo.text = self.event?.info
-        self.eventDate.text = self.event?.date
+        self.eventDate.text = self.event?.startDate
+        self.eventEndDate.text = self.event?.endDate
         self.eventLocation.text = self.event?.location
     }
     

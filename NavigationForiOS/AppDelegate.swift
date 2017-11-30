@@ -14,9 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var eventInfo: EventEntity?
+    
+    //ナビゲーション情報を格納する
+    var navigationDataEntity = NavigationDataEntity()
   
     //RouteViewControllerでdestinationの値を保持するために利用する
     var destination: String?
+    var departure: String?
+    
+    //BeaconLoggerに対してrouteIdを渡したいときに利用する
+    var currentRouteId: Int?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

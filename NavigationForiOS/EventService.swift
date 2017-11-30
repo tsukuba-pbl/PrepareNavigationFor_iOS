@@ -44,28 +44,34 @@ class EventService {
     ///
     /// - Parameter responseEvents: イベント情報
     func searchEvents(eventIdInputFormText: String, responseEvents: @escaping (EventEntity?, ResponseStatus) -> Void){
-        Alamofire.request("https://gist.githubusercontent.com/ferretdayo/097f7baf8648770d345645cd9f4a3696/raw/43f634bd6248f9a72082b9b717a131844c4c8492/requestEventID.json")
-        .responseJSON { response in
-            var events: EventEntity? = nil
-            var responseStatus: ResponseStatus = ResponseStatus.Success
-            switch response.result {
-            case .success(let response):
-                let eventJson = JSON(response)
-                
-                if eventJson["id"].string == "" {
-                    responseStatus = ResponseStatus.NotFound
-                } else if eventJson["id"].string != eventIdInputFormText {
-                    responseStatus = ResponseStatus.DontMatchEventId
-                } else {
-                    events = EventEntity(id: eventJson["id"].string!, name: eventJson["name"].string!, info: eventJson["info"].string!, date: eventJson["date"].string!, location: eventJson["location"].string!)
-                    responseStatus = ResponseStatus.Success
+        Alamofire.request("\(Const().URL_API)/events/\(eventIdInputFormText)")
+            .responseJSON { response in
+                var events: EventEntity? = nil
+                var responseStatus: ResponseStatus = ResponseStatus.Success
+                switch response.result {
+                case .success(let response):
+                    let eventJson = JSON(response)
+                    if eventJson["status"].int! != 200 {
+                        SlackService.postError(error: "イベントがありません", tag: "Event Service")
+                        responseStatus = ResponseStatus.NotFound
+                        break;
+                    }
+                    let data = eventJson["data"]
+                    if data["id"].string != eventIdInputFormText {
+                        responseStatus = ResponseStatus.DontMatchEventId
+                    } else {
+                        let formatter = DateFormatter()
+                        formatter.timeZone = NSTimeZone(name: "GMT")! as TimeZone!
+                        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                        events = EventEntity(id: data["id"].string!, name: data["name"].string!, info: data["description"].string!, startDate: formatter.string(from: Date(timeIntervalSince1970: TimeInterval(data["startDate"].int!)/1000)), endDate: formatter.string(from: Date(timeIntervalSince1970: TimeInterval(data["endDate"].int!)/1000)), location: data["location"].string!)
+                        responseStatus = ResponseStatus.Success
+                    }
+                    break
+                case .failure(let error):
+                    SlackService.postError(error: error.localizedDescription, tag: "Event Service")
+                    break
                 }
-                break
-            case .failure(let error):
-                SlackService.postError(error: error.localizedDescription, tag: "Event Service")
-                break
-            }
-            responseEvents(events, responseStatus)
+                responseEvents(events, responseStatus)
         }
     }
 }
