@@ -101,7 +101,7 @@ class NavigationDataEntity{
         var deg = 0
         if(routeId == 1){
             deg = (orientationDataList.filter({$0.routeId == routeId}).first?.orientation)!
-        }else if(routeId % 2 == 0 || routeId == trainDataList.count){ //通路のとき
+        }else if(routeId % 2 == 0){ //通路のとき
             deg = 0
         }else if(routeId == trainDataList.count){ //最終地点のとき
             //一つ前の交差点の方向
