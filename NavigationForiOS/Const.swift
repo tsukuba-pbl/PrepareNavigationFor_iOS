@@ -14,14 +14,14 @@ class Const : NSObject {
     #if DEBUG
     let URL_API = "http://localhost/api"
     #else
-    let URL_API = "https://210.140.71.132/api"
+    let URL_API = "https://mizugorou.site/api"
     #endif
     
     /* URL */
     #if DEBUG
     let URL_HOME = "http://localhost/"
     #else
-    let URL_HOME = "https://210.140.71.132/"
+    let URL_HOME = "https://mizugorou.site/"
     #endif
     
 }
