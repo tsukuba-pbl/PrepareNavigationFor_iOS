@@ -8,12 +8,13 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 protocol BeaconLoggerVCDelegate {
     func updateView()
 }
 
-class BeaconLoggerController : NSObject{
+class BeaconLoggerController : NSObject, AVSpeechSynthesizerDelegate{
     var navigations : NavigationEntity = NavigationEntity()
     var beaconManager : BeaconManager = BeaconManager()
     var trainData : Array<Dictionary<Int, Int>> = []
@@ -25,6 +26,8 @@ class BeaconLoggerController : NSObject{
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    var audioPlayerInstance : AVAudioPlayer! = nil  // 再生するサウンドのインスタンス
+    
     /// イニシャライザ
     ///
     /// - Parameters:
@@ -32,6 +35,19 @@ class BeaconLoggerController : NSObject{
     ///   - delegate: デリゲート
     ///   - routeId: 観測を行う場所のroute id
     init(navigations: NavigationEntity, delegate: BeaconLoggerVCDelegate){
+        //効果音の読み込み
+        // サウンドファイルのパスを生成
+        let soundFilePath = Bundle.main.path(forResource: "se2", ofType: "mp3")!
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成
+        do {
+            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            SlackService.postError(error: "AVAudioPlayerインスタンス作成失敗", tag: "SpeechService")
+        }
+        // バッファに保持していつでも再生できるようにする
+        audioPlayerInstance.prepareToPlay()
+        
         //使用するビーコン情報を格納
         self.navigations = navigations
         //デリゲートの設定
@@ -61,6 +77,8 @@ class BeaconLoggerController : NSObject{
     /// ビーコンの電波を受信するメソッド
     /// tapStartButton内のスレッド呼び出しによって、1秒ごとに呼ばれる
     func getBeaconRssi(){
+        //効果音をならす
+        audioPlayerInstance.play()
         //取得した回数をカウント
         getCounter += 1
         //ビーコンの電波強度の計測

@@ -67,6 +67,7 @@
 		C293A6001FAAB0C20099A807 /* UploadRouteDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */; };
 		C2962D571F5FC090004629CD /* LpfEuclidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2962D561F5FC090004629CD /* LpfEuclidTests.swift */; };
 		C2962D5F1F603496004629CD /* BeaconLoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2962D5E1F603496004629CD /* BeaconLoggerViewController.swift */; };
+		C2ABB0221FD57B980095E004 /* se2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2ABB0211FD57B980095E004 /* se2.mp3 */; };
 		C2B26B8B1F43EC7E00E4B785 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B26B891F43EC7800E4B785 /* CoreLocation.framework */; };
 		C2B26B8E1F45A54800E4B785 /* NavigationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B26B8D1F45A54800E4B785 /* NavigationViewControllerTests.swift */; };
 		C2B26B901F47005200E4B785 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B26B8F1F47005200E4B785 /* NavigationService.swift */; };
@@ -178,6 +179,7 @@
 		C293A5FF1FAAB0C20099A807 /* UploadRouteDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRouteDataViewController.swift; sourceTree = "<group>"; };
 		C2962D561F5FC090004629CD /* LpfEuclidTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LpfEuclidTests.swift; sourceTree = "<group>"; };
 		C2962D5E1F603496004629CD /* BeaconLoggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconLoggerViewController.swift; sourceTree = "<group>"; };
+		C2ABB0211FD57B980095E004 /* se2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = se2.mp3; path = ../../../../Downloads/se2.mp3; sourceTree = "<group>"; };
 		C2B26B891F43EC7800E4B785 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C2B26B8D1F45A54800E4B785 /* NavigationViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerTests.swift; sourceTree = "<group>"; };
 		C2B26B8F1F47005200E4B785 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		B14883411F3C4D32007A9E2E /* NavigationForiOS */ = {
 			isa = PBXGroup;
 			children = (
+				C2ABB0211FD57B980095E004 /* se2.mp3 */,
 				C20B11901F74B3A8004915B4 /* se1.wav */,
 				B14883911F455CE0007A9E2E /* services */,
 				B14883901F455CB3007A9E2E /* models */,
@@ -516,6 +519,7 @@
 				B148834F1F3C4D32007A9E2E /* LaunchScreen.storyboard in Resources */,
 				B148834C1F3C4D32007A9E2E /* Assets.xcassets in Resources */,
 				B148834A1F3C4D32007A9E2E /* Main.storyboard in Resources */,
+				C2ABB0221FD57B980095E004 /* se2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
