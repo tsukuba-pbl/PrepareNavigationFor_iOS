@@ -9,12 +9,16 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import UIKit
 
-class BeaconLoggerService{
+class BeaconLoggerService {
     
     /// 使用するビーコンのMinor Idのリストを取得する
     static func getBeaconMinorIdList(responseLocations: @escaping ([Int]) -> Void){
-        Alamofire.request("https://gist.githubusercontent.com/Minajun/8b85ac73b686cfa036dfcb1fd56a1c83/raw/33f4a160263b99a08f326d3d330204874965cdc0/beacons.json")
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let eventInfo: EventEntity = appDelegate.eventInfo!
+        let eventId: String = eventInfo.id!
+        Alamofire.request("\(Const().URL_API)/events/\(eventId)/beacons")
             .responseJSON { response in
                 var minorIdList: [Int] = []
                 switch response.result {
